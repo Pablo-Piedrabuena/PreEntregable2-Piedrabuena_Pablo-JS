@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Nogolac-Contactos</title>
+    <link rel="stylesheet" href="../css/Style.css">
+</head>
+<body>
+    <header>
+        <!--Menu de Navegacion-->    
+        <a href="../index.html" tabindex="-1"><img src="../imagenes/logo.png" alt="Logo Nogolac"></a>
+        <input type="checkbox" id="menu" style="display: none;">
+        <label for="menu" class="btn-toggle" tabindex="0"><img src="imagenes/iconos/menu-hamburguesa.png" alt=""></label>
+        <!-- <span class="material-symbols-outlined">Menu</span> -->      
+        <nav class="nav">
+            <ul class="nav__list">                 
+                <li class="list__item"><a href="../index.html">Inicio</a></li>
+                <li class="list__item otra">
+                    <input type="checkbox" id="submenu" style="display: none;">
+                    <label for="submenu" tabindex="0">Empresa</label>
+                    <ul class="item__dropdown">
+                        <li class="dropdown__item"><a href="/html/calidad.html">Calidad</a></li>
+                        <li class="dropdown__item"><a href="/html/produccion.html">Produccion</a></li>
+                        <li class="dropdown__item"><a href="/html/distribucion.html">Distribucion</a></li>
+                    </ul>
+                </li>
+                <li class="list__item"><a href="/html/productos.html">Productos</a></li>
+                <li class="list__item"><a href="/html/contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contactanos</h1>
+        <!--Formulario de Contacto--> 
+        <form action="">
+            <p>Nombre <input type="text" placeholder="Nombre" required></p>
+            <p>Dirección <input type="text" placeholder="Dirección"></p>
+            <p>Teléfono <input type="text" placeholder="Teléfono" required></p>
+            <p>Email <input type="text" placeholder="Email" required></p>
+            <p>Mensaje <textarea name="" placeholder="Mensaje" id="" cols="30" rows="5"></textarea> </p>              
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="mapa">
+            <h2>Estamos Aquí</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d107806.24324246972!2d-59.8002694!3d-32.3938333!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b135e079e3198b%3A0x9a4e43d439446c0d!2sNogolac%20S.A.!5e0!3m2!1ses!2sar!4v1712623898726!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-contenerdor">
+            <h3>Oficinas</h3>
+            <p>Alem y Boulevar Sarmiento</p>
+            <p>Nogoyá, Entre Ríos (CP 3150)</p>
+            <p>Tel.:(03435) 421124</p>
+            <h4>Email:</h4>
+            <ul>
+                <li>ventas@lacteosnogolac.com</li>
+                <li>lacteosnogolac@hotmail.com</li>
+            </ul>
+        </div>
+        <div class="footer-contenerdor">
+            <h3>Planta</h3>
+            <p>Boulevar Mitre 719</p>
+            <p>Nogoyá, Entre Ríos (CP 3150)</p>
+            <p>Tel.:(03435) 425058</p>
+            
+        </div>
+        <div class="footer-contenerdor">
+            <h3>Seguinos</h3>
+            <a href="https://www.facebook.com/L%C3%A1cteos-Nogolac-105397054165370/" target="_blanck" rel="noopener"><img src="imagenes/iconos/facebook.png" alt=""></a>
+            <a href="https://www.instagram.com/lacteosnogolac/" target="_blanck" rel="noopener"><img src="imagenes/iconos/instagram.png" alt=""></a>
+            <a href="https://www.twitter.com/lacteosnogolac/" target="_blanck" rel="noopener"><img src="imagenes/iconos/x.png" alt=""></a>
+            <a href="https://www.google.com.ar/maps/place/Nogolac/@-32.3938333,-59.8002694,12z/data=!4m8!1m2!2m1!1slacteos+nogolac!3m4!1s0x95b135e079e3198b:0x9a4e43d439446c0d!8m2!3d-32.395391!4d-59.7948416" target="_blanck" rel="noopener"><img src="imagenes/iconos/google.png" alt=""></a>
+        </div>
+    </footer>
+</body>
+</html>
