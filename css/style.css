@@ -185,7 +185,7 @@ h1{
 /*MEDIAS QUERYS*/
 
 /*Media Query Small*/
-@media screen and (max-width: 426px){
+@media screen and (max-width: 427px){
     .nav{
         display: none;
     }
