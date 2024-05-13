@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nogolac-Productos</title>
-    <link rel="stylesheet" href="../css/Style.css">
-</head>
+<!--LINK PARA USO DE GOOGLE FONTS - TIPO LETRA-->
+<link href="https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<!--LINK PARA USO DE GOOGLE ICON-->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+<!--LINK A ARCHIVO STYLE PROPIO-->
+<link rel="stylesheet" href="../css/style.css">
 <body>
     <header>
-        <!--Menu de Navegacion-->    
         <a href="../index.html" tabindex="-1"><img src="../imagenes/logo.png" alt="Logo Nogolac"></a>
         <input type="checkbox" id="menu" style="display: none;">
-        <label for="menu" class="btn-toggle" tabindex="0"><img src="imagenes/iconos/menu-hamburguesa.png" alt=""></label>
+        <label for="menu" class="btn-toggle" tabindex="0"><img src="../imagenes/iconos/menu-hamburguesa.png" alt="icono menu hamburguesa"></label>
         <!-- <span class="material-symbols-outlined">Menu</span> -->      
         <nav class="nav">
             <ul class="nav__list">                 
@@ -20,13 +23,14 @@
                     <input type="checkbox" id="submenu" style="display: none;">
                     <label for="submenu" tabindex="0">Empresa</label>
                     <ul class="item__dropdown">
-                        <li class="dropdown__item"><a href="/html/calidad.html">Calidad</a></li>
-                        <li class="dropdown__item"><a href="/html/produccion.html">Produccion</a></li>
-                        <li class="dropdown__item"><a href="/html/distribucion.html">Distribucion</a></li>
+                        <li class="dropdown__item"><a href="calidad.html">Calidad</a></li>
+                        <li class="dropdown__item"><a href="produccion.html">Produccion</a></li>
+                        <li class="dropdown__item"><a href="distribucion.html">Distribucion</a></li>
                     </ul>
                 </li>
-                <li class="list__item"><a href="/html/productos.html">Productos</a></li>
-                <li class="list__item"><a href="/html/contactos.html">Contacto</a></li>
+                <li class="list__item"><a href="productos.html">Productos</a></li>
+                <li class="list__item"><a href="contactos.html">Contacto</a></li>
+
             </ul>
         </nav>
     </header>
@@ -34,163 +38,128 @@
     <main>
 
     </main>
-        <!--Seeción Presentacion-->
-        <section>
-            <h1>NUESTROS PRODUCTOS</h1>
+        <h1>NUESTROS PRODUCTOS</h1>
+        <section class="descripcion-principal">
             <p>Acercamos a tu mesa, una gran
                 variedad de Productos: Quesos Blandos,
                 Quesos Semi-Duros, Quesos Duros, Ricotta,
                 Crema de Leche y Manteca, de alta calidad y a un precio accesible.
             </p>
         </section>
-        <!--Sección lista de productos-->
-        <Section>
-                <div class="Contenedor-Tres-Productos">
-                    <div>
-                        <img src="../Imagenes/Productos/Holanda.jpg" alt="Queso Holanda">
-                        <h3>Holanda</h3>
-                    </div>
-                    <div>
-                        <img src="../Imagenes/Productos/Provoleta.jpg" alt="Queso Provoleta">
-                        <h3>Provoleta</h3>
-                    </div>
-                    <div>
-                        <img src="../Imagenes/Productos/Reggianito.jpg" alt="Queso Reggianito">
-                        <h3>Reggianito</h3>
-                    </div>
-                </div>
+        <section class="galeria__productos">
+            <figure class="productos__item">
+                <img src="../imagenes/productos/cremoso.png" alt="Horma de Cremoso Nogolac">
+                <figcaption>Queso Cremoso</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/cremoso-pizzero-hilado.png" alt="Horma de Cremoso Pizzero Nogolac">
+                <figcaption>Queso Cremoso Pizzero Hilado</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/magro.png" alt="Media Horma Queso Magro Nogolac">
+                <figcaption>Queso Magro - Media Horma</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/por-salut.png" alt="Horma queso Por Salut Nogolac">
+                <figcaption>Queso Por Salut</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/mozzarella-cilindro-hilada.png" alt="Horma Queso Mozzarella Cilindro Hilada Nogolac">
+                <figcaption>Queso Mozzarella Cilindro Hilada</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/mozzarella-hilada-barra.png" alt="Horma Queso Mozzarella Hilada Para Fetear Nogolac">
+                <figcaption>Queso Mozzarella Hilada Para Fetear</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/tybo.png" alt="Horma Queso Tybo Nogolac">
+                <figcaption>Queso Tybo</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/colonia.png" alt="Horma Queso Colonia Nogolac">
+                <figcaption>Queso Colonia</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/holanda.png" alt="Horma de Queso Holanda Nogolac">
+                <figcaption>Queso Holanda</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/reggianito.png" alt="Horma Queso Reggianito Nogolac">
+                <figcaption>Queso Reggianito</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/sardo.png" alt="Horma Queso Sardo Nogolac">
+                <figcaption>Queso Sardo</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/queso-azul.png" alt="Horma queso Azul Nogolac">
+                <figcaption>Queso Azul</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/salsa-queso-azul-pouch.png" alt="Pouch Salsa Queso Azul Nogolac">
+                <figcaption>Salsa Queso Azul en Pouch</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/salsa-cheddar-pouch.png" alt="Pouch Salsa Cheddar Nogolac">
+                <figcaption>Salsa Cheddar en Pouch</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/crema-leche-balde.png" alt="Balde de crema de leche Nogoalc">
+                <figcaption>Crema de leche en Balde</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/crema-leche-pote.png" alt="Pote de crema de leche Nogoalc">
+                <figcaption>Crema de leche en Pote</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/crema-leche-pouch.png" alt="Pouch de crema de leche Nogoalc ">
+                <figcaption>Crema de leche en Pouch</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/ricotta.png" alt="Horma Ricotta Semi Magra Nogolac">
+                <figcaption>Ricotta Semi Magra</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/manteca-pan.png" alt="Pan Manteca Nogolac">
+                <figcaption>Manteca en Pan</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/leche-entera.png" alt="Caja Leche entera Nogolac">
+                <figcaption>Leche Entera</figcaption>
+            </figure>
+            <figure class="productos__item">
+                <img src="../imagenes/productos/rallado-sobre.png" alt="Caja y Sobre Rallado Nogolac">
+                <figcaption>Rallado Nogolac en Sobre</figcaption>
+            </figure>
+        </section>
 
-                <div class="Contenedor-Tres-Productos">
-                    <div>
-                        <img src="../Imagenes/Productos/Sardo.jpg" alt="Queso Sardo">
-                        <h3>Sardo</h3>
-                    </div>
-                    <div>
-                        <img src="../Imagenes/Productos/Tybo.jpg" alt="Queso Tybo">
-                        <h3>tybo</h3>
-                    </div>
-                    <div>
-                        <img src="../Imagenes/Productos/Cremoso.jpg" alt="Queso Cremoso">
-                        <h3>Cremoso</h3>
-                    </div>
-                </div>
-
-                <div class="Contenedor-Tres-Productos">
-                    <div>
-                        <img src="../Imagenes/Productos/Cremoso-Pizzero-Hilado.jpg" alt="Queso Cremoso Pizzero Hilado">
-                        <h3>Cremoso Pizzero Hilado</h3>
-                    </div>
-                    <div>
-                        <img src="../Imagenes/Productos/Por-Salut.jpg" alt="Queso Por Salut">
-                        <h3>Por Salut</h3>
-                    </div>
-                    <div>
-                        <img src="../Imagenes/Productos/Ricotta-Semi-Magra.jpg" alt="Ricotta Semi Magra">
-                        <h3>Ricotta Semi Magra</h3>
-                    </div>
-                </div>
-                <div class="Contenedor-Tres-Productos">
-                    <div>
-                        <img src="../Imagenes/Productos/Magro.jpg" alt="Queso Magro Sin Sal">
-                        <h3>Magro Sin Sal</h3>
-                    </div>
-                    <div>
-                        <img src="../Imagenes/Productos/Mozzarella_Cilindro.jpg" alt="Queso Mozzarela Cilindro">
-                        <h3>Mozzarela Cilindro</h3>
-                    </div>
-                    <div>
-                        <img src="../Imagenes/Productos/Mozzarella-Hilada.jpg" alt="Queso Mozzarela Hilada">
-                        <h3>Mozzarela Hilada</h3>
-                    </div>
-                </div>
-
-                <div class="Contenedor-Tres-Productos">
-                    <div>
-                        <img src="../Imagenes/Productos/Queso-Crema-Pote.jpg" alt="Queso Crema en Pote">
-                        <h3>Queso Crema - Pote</h3>
-                    </div>
-                    <div>
-                        <img src="../Imagenes/Productos/Queso-Crema-Pouch.jpg" alt="Queso Crema en Pouch">
-                        <h3>Queso Crema - Pouch</h3>
-                    </div>
-                    <div>
-                        <img src="../Imagenes/Productos/Queso-Rallado-Sobre.jpg" alt="Rallado en Sobre">
-                        <h3>Rallado - Pouch</h3>
-                    </div>
-                </div>
-
-                <div class="Contenedor-Tres-Productos">
-                    <div>
-                        <img src="../Imagenes/Productos/Rallado_3k.jpg" alt="Rallado por 3 kilos">
-                        <h3>Rallado - 3 kg</h3>
-                    </div>
-                    <div>
-                        <img src="../Imagenes/Productos/Queso-Azul.jpg" alt="Rallado Azul">
-                        <h3>Queso Azul</h3>
-                    </div>
-                    <div>
-                        <img src="../Imagenes/Productos/Pasta-Queso-Azul.jpg" alt="Pasta Queso Azul en Pouch">
-                        <h3>Pasta Queso Azul - Pouch</h3>
-                    </div>
-                </div>
-
-                <div class="Contenedor-Tres-Productos">
-                    <div>
-                        <img src="../Imagenes/Productos/Pasta-Cheddar-Pouch.jpg" alt="Pasta Queso Cheddar en Pouch">
-                        <h3>Pasta Cheddar - Pouch</h3>
-                    </div>
-                    <div>
-                        <img src="../Imagenes/Productos/Manteca-Pan.jpg" alt="Manteca en Pan">
-                        <h3>Manteca - Pan</h3>
-                    </div>
-                    <div>
-                        <img src="../Imagenes/Productos/Manteca-Pilon.jpg" alt="Manteca en Pilon">
-                        <h3>Manteca - Pilon</h3>
-                    </div>
-                </div>
-
-                <div class="Contenedor-Tres-Productos">
-                    <div>
-                        <img src="../Imagenes/Productos/Crema-Leche-Pote.jpg" alt="Crema de leche en Pote">
-                        <h3>Crema de Leche - pote</h3>
-                    </div>
-                    <div>
-                        <img src="../Imagenes/Productos/Crema-Leche-Balde.jpg" alt="Crema de leche en Balde">
-                        <h3>Crema de Leche - Balde</h3>
-                    </div>
-                    <div>
-                        <img src="../Imagenes/Productos/Queso-Crema-Pouch.jpg" alt="Crema de leche en Pouch">
-                        <h3>Crema de Leche - Pouch</h3>
-                    </div>
-                </div>
-
-        </Section>
-    <footer>
-        <div class="footer-contenerdor">
-            <h3>Oficinas</h3>
-            <p>Alem y Boulevar Sarmiento</p>
-            <p>Nogoyá, Entre Ríos (CP 3150)</p>
-            <p>Tel.:(03435) 421124</p>
-            <h4>Email:</h4>
-            <ul>
-                <li>ventas@lacteosnogolac.com</li>
-                <li>lacteosnogolac@hotmail.com</li>
-            </ul>
-        </div>
-        <div class="footer-contenerdor">
-            <h3>Planta</h3>
-            <p>Boulevar Mitre 719</p>
-            <p>Nogoyá, Entre Ríos (CP 3150)</p>
-            <p>Tel.:(03435) 425058</p>
-            
-        </div>
-        <div class="footer-contenerdor">
-            <h3>Seguinos</h3>
-            <a href="https://www.facebook.com/L%C3%A1cteos-Nogolac-105397054165370/" target="_blanck" rel="noopener"><img src="imagenes/iconos/facebook.png" alt=""></a>
-            <a href="https://www.instagram.com/lacteosnogolac/" target="_blanck" rel="noopener"><img src="imagenes/iconos/instagram.png" alt=""></a>
-            <a href="https://www.twitter.com/lacteosnogolac/" target="_blanck" rel="noopener"><img src="imagenes/iconos/x.png" alt=""></a>
-            <a href="https://www.google.com.ar/maps/place/Nogolac/@-32.3938333,-59.8002694,12z/data=!4m8!1m2!2m1!1slacteos+nogolac!3m4!1s0x95b135e079e3198b:0x9a4e43d439446c0d!8m2!3d-32.395391!4d-59.7948416" target="_blanck" rel="noopener"><img src="imagenes/iconos/google.png" alt=""></a>
-        </div>
-    </footer>
+        <footer class="contenedor-footer">
+            <div class="contenedor-footer__columna">
+                <h3>Oficinas</h3>
+                <p>Alem y Boulevar Sarmiento</p>
+                <p>Nogoyá, Entre Ríos (CP 3150)</p>
+                <p>Tel.:(03435) 421124</p>
+            </div>
+            <div class="contenedor-footer__columna">
+                <h3>Planta</h3>
+                <p>Nogoyá, Entre Ríos (CP 3150)</p>
+                <p>Tel.:(03435) 425058</p>
+            </div>
+            <div class="contenedor-footer__columna">
+                <h3>Email:</h3>
+                <a class="columna__email" href="mailto:ventas@lacteosnogolac.com">ventas@lacteosnogolac.com</a>
+                <a class="columna__email" href="mailto:lacteosnogolac@hotmail.com">lacteosnogolac@hotmail.com</a>
+            </div>
+            <div class="contenedor-footer__columna">
+                <h3>Seguinos</h3>
+                <a href="https://www.facebook.com/L%C3%A1cteos-Nogolac-105397054165370/" target="_blanck" rel="noopener"><img src="../imagenes/iconos/facebook.png" alt="Icono facebook  con enlace"></a>
+                <a href="https://www.instagram.com/lacteosnogolac/" target="_blanck" rel="noopener"><img src="../imagenes/iconos/instagram.png" alt="icono instagram con enlace"></a>
+                <a href="https://www.twitter.com/lacteosnogolac/" target="_blanck" rel="noopener"><img src="../imagenes/iconos/x.png" alt="icono x con enlace"></a>
+                <a href="https://www.google.com.ar/maps/place/Nogolac/@-32.3938333,-59.8002694,12z/data=!4m8!1m2!2m1!1slacteos+nogolac!3m4!1s0x95b135e079e3198b:0x9a4e43d439446c0d!8m2!3d-32.395391!4d-59.7948416" target="_blanck" rel="noopener"><img src="../imagenes/iconos/google.png" alt="icono google con enlace"></a>
+            </div>
+            <div class="columna__parrafo">
+                <p class="">© Pablo P - Pagina hecha solo a fines educativos.</p>
+            </div>
+        </footer>
 </body>
 </html>

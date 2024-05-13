@@ -21,6 +21,7 @@ header{
     position: sticky;
     top: 0px;
     z-index: 1;
+    /* width: 100%; */
 
 }
 
@@ -30,7 +31,8 @@ header a img{
 nav{
     user-select: none;
     display: flex;
-    font-size: 1rem;    
+    font-size: 1rem;
+    /* width: 100%;   */  
 }
 .nav__list{
     display: flex;
@@ -72,14 +74,18 @@ h1{
     font-size: 2.5rem;
     color: var(--color-Celeste);
     font-weight: 600;
-    text-align: center;
+    text-align:center;
     border-top: 1px solid #aaa;
     padding-top: .5rem;
 }
-
+.descripcion-principal p{
+    font-size: 1.rem;
+    font-weight: 400;
+    text-align: center;
+}
 .contenedor__tarjeta{
     display: grid;
-    margin: 2rem auto;
+    margin: 1rem auto;
     grid-template-columns: 50% 50%;
     grid-template-rows:auto;
     justify-content: center;
@@ -108,7 +114,7 @@ h1{
     margin: auto;
     width: 100%;
     text-align: right;
-    padding: 0.5rem;
+    /* padding: .5rem; */
 
 }
 
@@ -117,6 +123,7 @@ h1{
     object-fit:cover;
     border-radius: 10px;
     margin: auto;
+    /* padding: .5rem; */
 }
 
 .item--textoDos{
@@ -164,7 +171,6 @@ h1{
     float: none;
     width: 10rem;
     box-sizing: border-box;
-    box-shadow: 0px -2px 36px -16px var(--color-Celeste);
     font-size: 1rem;
 }
 .tarjeta--filosofia__item img{
@@ -177,10 +183,44 @@ h1{
     font-family: 'Barlow', sans-serif;
     font-size: 1rem;
 }
+
+.galeria__productos{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    justify-content: center;
+    align-items:baseline;
+   /*  padding: 0.5rem; */
+    width: 80%;
+    border-radius: 1rem;
+    box-shadow: 0px -2px 36px -16px var(--color-Celeste);
+}
+
+.productos__item{
+    width: 20rem;
+    height: auto;
+    box-sizing: border-box;
+    margin: 1rem;
+}
+.productos__item img{
+    width: 100%;
+    object-fit:cover;
+    border-radius: 10px;
+}
+.productos__item figcaption{
+    text-align:center;
+    align-content: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    background-color: var(--color-Celeste);
+    color: var(--color-gris-claro);
+    height: 2.5rem;
+    border-radius: 0px 5px 0px 5px;
+}
+
 .contenedor-footer {
     display: flex;
     flex-wrap: wrap;
-    padding: 1rem;
     background-color: var(--color-Celeste);
     width: 100%;
 }
@@ -198,6 +238,7 @@ h1{
 }
 
 .contenedor-footer__columna img {
+    object-fit:cover;
     width: 2rem;
     margin-right: 1rem;
 }
@@ -300,7 +341,8 @@ h1{
         display: none;
     }
     .nav{
-        display: block;
+        /* display: block; */
+        /* width: 100%; */
     }
     
     .list__item:hover > .item__dropdown{
@@ -312,7 +354,7 @@ h1{
     }
     .contenedor__tarjeta{
         display: flex;
-    flex-direction: column;
+        flex-direction: column;
 
     }
     .item--textoDos{
@@ -355,9 +397,5 @@ h1{
     }
 
 }
-
-
-
-
 
 
