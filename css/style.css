@@ -7,7 +7,6 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: --color-gris-claro;
     font-family: 'Barlow', sans-serif;
     font-size: 16px;
 }
@@ -21,8 +20,6 @@ header{
     position: sticky;
     top: 0px;
     z-index: 1;
-    /* width: 100%; */
-
 }
 
 header a img{
@@ -32,7 +29,6 @@ nav{
     user-select: none;
     display: flex;
     font-size: 1rem;
-    /* width: 100%;   */  
 }
 .nav__list{
     display: flex;
@@ -114,8 +110,6 @@ h1{
     margin: auto;
     width: 100%;
     text-align: right;
-    /* padding: .5rem; */
-
 }
 
 .item--imagen img{
@@ -123,7 +117,6 @@ h1{
     object-fit:cover;
     border-radius: 10px;
     margin: auto;
-    /* padding: .5rem; */
 }
 
 .item--textoDos{
@@ -190,7 +183,6 @@ h1{
     margin: 2rem auto;
     justify-content: center;
     align-items:baseline;
-   /*  padding: 0.5rem; */
     width: 80%;
     border-radius: 1rem;
     box-shadow: 0px -2px 36px -16px var(--color-Celeste);
@@ -217,6 +209,80 @@ h1{
     height: 2.5rem;
     border-radius: 0px 5px 0px 5px;
 }
+
+.contenedor__contacto{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0px -2px 36px -16px var(--color-Celeste);
+}
+.contacto__formulario{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.contenedor__contacto .contacto__formulario label, .contenedor__contacto .contacto__formulario input, .contenedor__contacto .contacto__formulario textarea{
+    display: block;
+    margin: .2rem auto;
+    font-size: 1rem;
+    width: 90%;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    align-items: center;
+}
+.contenedor__contacto .contacto__formulario input{
+    border:none;
+    border-bottom:1px solid var(--color-Celeste);
+}   
+.contenedor__contacto .contacto__formulario textarea{
+    border:none;
+    border-bottom:1px solid var(--color-Celeste);
+} 
+.contenedor__contacto .contacto__formulario input:focus{
+    outline: none;
+}
+.contenedor__contacto .contacto__formulario textarea:focus{
+    outline: none;
+}
+.contenedor__contacto .contacto__formulario h3{
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 90%;
+}
+.contenedor__contacto .contacto__formulario button{
+    display: inline;
+    border-radius: 8px;
+    width: 100px;
+    margin: .5rem auto;
+    padding: .5rem;
+    background-color: var(--color-Celeste);
+    color: var(--color-gris-claro);
+
+}
+
+
+.contenedor__contacto .contacto__mapa{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contenedor__contacto .contacto__mapa iframe{
+    margin: .5rem auto;
+    font-size: 1rem;
+    width: 90%;
+}
+
+.contenedor__contacto .contacto__mapa h3{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 
 .contenedor-footer {
     display: flex;
@@ -319,6 +385,21 @@ h1{
         order: 2;
     }
 
+    .contenedor__contacto{
+        flex-direction: column;
+        box-shadow: none;
+    }
+    .contacto__formulario{
+        border-radius: 5px 5px 5px 5px;
+        margin-bottom: 2rem;
+        box-shadow: 0px -2px 36px -16px var(--color-Celeste);
+    }
+    .contenedor__contacto .contacto__mapa{
+        width: 100%;
+        border-radius: 5px 5px 5px 5px;
+        box-shadow: 0px -2px 36px -16px var(--color-Celeste);
+    }
+
     .contenedor-footer {
         flex-direction: column;
     }
@@ -340,10 +421,6 @@ h1{
     .btn-toggle{
         display: none;
     }
-    .nav{
-        /* display: block; */
-        /* width: 100%; */
-    }
     
     .list__item:hover > .item__dropdown{
         display: block;
@@ -364,6 +441,22 @@ h1{
     .item--imagenDos{
         order: 2;
     }
+
+    .contenedor__contacto{
+        flex-direction: column;
+        box-shadow: none;
+    }
+    .contacto__formulario{
+        border-radius: 5px 5px 5px 5px;
+        margin-bottom: 2rem;
+        box-shadow: 0px -2px 36px -16px var(--color-Celeste);
+    }
+    .contenedor__contacto .contacto__mapa{
+        width: 100%;
+        border-radius: 5px 5px 5px 5px;
+        box-shadow: 0px -2px 36px -16px var(--color-Celeste);
+    }
+
     .contenedor-footer {
         flex-direction: column;
     }
