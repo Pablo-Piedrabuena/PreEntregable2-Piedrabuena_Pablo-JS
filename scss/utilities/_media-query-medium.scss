@@ -1,0 +1,41 @@
+@import "../utilities/variables";
+
+@media screen and (min-width: 427px) and (max-width: 767px){
+    .contenedor__tarjeta{
+        display: flex;
+        flex-direction: column;
+        .item--textoDos{
+            order: 1;
+        }
+        .item--imagenDos{
+            order: 2;
+        }
+    }
+    .contenedor__contacto{
+        flex-direction: column;
+        box-shadow: none;
+        .contacto__formulario{
+            border-radius: 5px 5px 5px 5px;
+            margin-bottom: 2rem;
+            box-shadow: 0px -2px 36px -16px var(--color-Celeste);
+        }
+        .contacto__mapa{
+            width: 100%;
+            border-radius: 5px 5px 5px 5px;
+            box-shadow: 0px -2px 36px -16px var(--color-Celeste);
+        }
+    }
+    .contenedor-footer {
+        flex-direction: column;
+        .contenedor-footer__columna {
+            border-bottom: 1px solid var(--color-gris-claro);
+            padding-bottom: 1rem 1rem;
+            text-align: center;
+        }
+        .columna__parrafo{
+            padding-bottom: 0;
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+    }
+}

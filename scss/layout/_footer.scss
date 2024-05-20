@@ -1,0 +1,42 @@
+@import "../utilities/variables";
+
+.contenedor-footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $color-celeste;
+    width: 100%;
+    .contenedor-footer__columna {
+        flex: 1; /* Cada columna ocupa 1/3 del ancho disponible */
+        padding: 0.5rem 0.5rem;
+        h3{
+            font-size: 1.2rem;
+            color:$colorgris-claro;
+        }
+        p{
+            font-size: 1rem;
+            color: $colorgris-claro;
+        }
+        a{
+            font-size: 1rem;
+            color: $colorgris-claro;
+            img {
+                object-fit:cover;
+                width: 2rem;
+                margin-right: 1rem;
+            }
+        }
+        .columna__email{
+            display: block;
+            padding-bottom: 1rem;
+            text-decoration: none;
+        }
+    }
+    .columna__parrafo{
+        display: block;
+        width: 100%;
+        font-size: .5rem;
+        color: var(--color-gris-claro);
+        margin-top: 1rem;
+        text-align: center;
+    }
+}

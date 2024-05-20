@@ -1,0 +1,22 @@
+@import "../utilities/variables";
+.productos__item{
+    width: 20rem;
+    height: auto;
+    box-sizing: border-box;
+    margin: 1rem;
+    img{
+        width: 100%;
+        object-fit:cover;
+        border-radius: 10px;
+    }
+    figcaption{
+        text-align:center;
+        align-content: center;
+        font-family: 'Barlow', sans-serif;
+        font-size: 1rem;
+        background-color: $color-celeste;
+        color: $colorgris-claro;
+        height: 2.5rem;
+        border-radius: 0px 5px 0px 5px;
+    }
+}

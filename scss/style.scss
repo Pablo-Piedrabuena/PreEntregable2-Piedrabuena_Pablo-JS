@@ -1,0 +1,24 @@
+@import "./base/reset";
+
+/*LAYOUT*/
+@import "./layout/header";
+@import "./layout/titulo-principal";
+@import "./layout/descripcion-principal";
+@import "./layout/contenedor-tarjeta";
+@import "./layout/contenedor-galeria-productos";
+@import "./layout/contenedor-contacto";
+@import "./layout/footer";
+
+/*COMPONENTS*/
+@import "./components/tarjeta-uno";
+@import "./components/tarjeta-dos";
+@import "./components/tarjeta-tres";
+@import "./components/item-producto";
+@import "./components/formulario-contacto";
+
+/*UTILITIES*/
+@import "./utilities/variables";
+@import "./utilities/media-query-small";
+@import "./utilities/media-query-medium";
+@import "./utilities/media-query-large";
+
