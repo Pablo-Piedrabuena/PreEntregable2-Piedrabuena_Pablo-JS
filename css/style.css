@@ -310,9 +310,10 @@ h1 {
   margin: 1rem;
 }
 .productos__item:hover {
-  transform: scale(1.2, 1.2);
+  /* transform: scale(1.2,1.2); */
   /* transition: transform 1s; */
-  transition: all 1s;
+  /* transition: all 1s */
+  /* transform: rotate(45deg); */
 }
 .productos__item img {
   width: 100%;
@@ -547,6 +548,61 @@ h1 {
     border-bottom: none;
     margin-bottom: 0;
   }
+}
+/* @keyframes aparecer{
+    0%{
+        opacity: .0;
+    }
+    25%{
+        opacity: .1;
+        @include box-shadow(red);
+    }
+    50%{
+        opacity: .2;
+        @include box-shadow(blue);
+    }
+    75%{
+        opacity: .3;
+        @include box-shadow(green);
+    }
+    100%{
+        opacity: .4;
+        @include box-shadow(rgb(128, 0, 102));
+    }
+} */
+@keyframes aparecer {
+  0% {
+    /* opacity: .0; */
+  }
+  25% {
+    /* opacity: .1; */
+    box-shadow: 0px -2px 36px -16px red;
+    transform: scaley(1.01);
+  }
+  50% {
+    /* opacity: .2; */
+    box-shadow: 0px -2px 36px -16px blue;
+    transform: scaley(1.02);
+  }
+  75% {
+    /* opacity: .3; */
+    box-shadow: 0px -2px 36px -16px green;
+    transform: scaley(1.03);
+  }
+  100% {
+    /* opacity: .4; */
+    box-shadow: 0px -2px 36px -16px rgb(128, 0, 102);
+    transform: scaley(1.04);
+  }
+}
+.animacion-aparecer:hover {
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  /*  transform: scale(1.1,1.1); */
+  /* transition: all 1s */
+  /* animation-iteration-count:; */
 }
 
 /*# sourceMappingURL=style.css.map */
