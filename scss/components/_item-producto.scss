@@ -4,16 +4,26 @@
     height: auto;
     box-sizing: border-box;
     margin: 1rem;
+    &:hover{
+        transform: scale(1.2,1.2);
+        /* transition: transform 1s; */
+        transition: all 1s
+        
+        /* transform: rotate(45deg); */
+    }
     img{
-        width: 100%;
+        @include estilo-imagen;
+        /* width: 100%;
         object-fit:cover;
-        border-radius: 10px;
+        border-radius: 10px; */
+        
     }
     figcaption{
         text-align:center;
         align-content: center;
-        font-family: 'Barlow', sans-serif;
-        font-size: 1rem;
+        @include fuente-texto(1rem,400);
+        /* font-family: 'Barlow', sans-serif;
+        font-size: 1rem; */
         background-color: $color-celeste;
         color: $colorgris-claro;
         height: 2.5rem;

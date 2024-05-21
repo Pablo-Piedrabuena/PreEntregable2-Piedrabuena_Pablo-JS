@@ -1,4 +1,5 @@
 @import "./base/reset";
+@import "./utilities/mixins";
 
 /*LAYOUT*/
 @import "./layout/header";
@@ -21,4 +22,3 @@
 @import "./utilities/media-query-small";
 @import "./utilities/media-query-medium";
 @import "./utilities/media-query-large";
-

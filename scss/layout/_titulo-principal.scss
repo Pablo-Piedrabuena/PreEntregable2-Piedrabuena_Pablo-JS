@@ -1,9 +1,10 @@
 @import "../utilities/variables";
 
 h1{
-    font-size: 2.5rem;
+    @include fuente-texto(2.5rem,600);
+    /* font-size: 2.5rem; */
     color: $color-celeste;
-    font-weight: 600;
+    /* font-weight: 600; */
     text-align:center;
     border-top: 1px solid #aaa;
     padding-top: .5rem;

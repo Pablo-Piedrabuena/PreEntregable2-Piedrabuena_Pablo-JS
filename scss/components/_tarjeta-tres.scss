@@ -8,27 +8,36 @@
     padding: 0.5rem;
     width: 80%;
     border-radius: 1rem;
-    box-shadow: 0px -2px 36px -16px $color-celeste;
+    @include box-shadow($color-celeste);
+    /* box-shadow: 0px -2px 36px -16px $color-celeste; */
     align-items: center;
-    h2,p{
+    h2{
+        @include fuente-texto(1.5rem,bold);
         display: block;
         width: 100%;
         margin: .5rem;
+        
+    }
+    p{
+        @extend h2;
+        @include fuente-texto(1rem,400);
     }
     .tarjeta--filosofia__item{
         float: none;
         width: 10rem;
         box-sizing: border-box;
-        font-size: 1rem;
+        /* font-size: 1rem; */
         img{
-            width: 100%;
+            @include estilo-imagen;
+            /* width: 100%;
             object-fit:cover;
-            border-radius: 10px;
+            border-radius: 10px; */
         }
         figcaption{
             text-align: center;
-            font-family: 'Barlow', sans-serif;
-            font-size: 1rem;
+            @include fuente-texto(1rem,400);
+            /* font-family: 'Barlow', sans-serif;
+            font-size: 1rem; */
         }
     }
 }

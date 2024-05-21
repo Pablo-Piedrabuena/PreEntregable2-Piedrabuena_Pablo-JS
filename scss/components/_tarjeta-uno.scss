@@ -1,13 +1,13 @@
 @import "../utilities/variables";
+/* @import "../utilities/mixins"; */
 
     .item--texto{
         grid-column: 1/2;
         grid-row: 1/4;
         padding: 0.5rem;
+        @include fuente-texto(1rem,400);
         margin: auto;
         text-align: justify;
-        font-family: 'Barlow', sans-serif;
-        font-size: 1rem;
         }
     .item--imagen{
         grid-column: 2/3;
@@ -16,9 +16,10 @@
         width: 100%;
         text-align: right;
         img{
-            width: 100%;
+            @include estilo-imagen;
+           /*  width: 100%;
             object-fit:cover;
             border-radius: 10px;
-            margin: auto;
+            margin: auto; */
         }
     }
