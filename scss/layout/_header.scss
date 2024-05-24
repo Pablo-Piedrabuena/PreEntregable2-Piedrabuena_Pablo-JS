@@ -8,11 +8,32 @@ header{
     position: sticky;
     top: 0px;
     z-index: 1;
-    a{
-        img{
-            width: 5rem;
+    padding-bottom: 0.5rem;
+    .contenedor-logo{
+        position: relative;
+        width: 5rem;
+        margin: 0;
+        a{
+            img{
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .relleno{
+            position: absolute;
+            margin: auto;
+            transition: relleno 1s ease-in;
+            z-index: -1;
+            width: 90%;
+            background-color: white;
+            animation-name: relleno-liquido;
+            animation-timing-function:linear;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
         }
     }
+    
     .btn-toggle{
         display: none;
         background-color: $color-celeste;
@@ -21,7 +42,7 @@ header{
     nav{
         user-select: none;
         display: flex;
-        /* font-size: 1rem; */
+       /*  font-size: 1rem; */
         .nav__list{
             display: flex;
             margin-bottom: 0;

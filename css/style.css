@@ -16,9 +16,28 @@ header {
   position: sticky;
   top: 0px;
   z-index: 1;
+  padding-bottom: 0.5rem;
 }
-header a img {
+header .contenedor-logo {
+  position: relative;
   width: 5rem;
+  margin: 0;
+}
+header .contenedor-logo a img {
+  width: 100%;
+  object-fit: contain;
+}
+header .contenedor-logo .relleno {
+  position: absolute;
+  margin: auto;
+  transition: relleno 1s ease-in;
+  z-index: -1;
+  width: 90%;
+  background-color: white;
+  animation-name: relleno-liquido;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
 }
 header .btn-toggle {
   display: none;
@@ -27,7 +46,7 @@ header .btn-toggle {
 header nav {
   user-select: none;
   display: flex;
-  /* font-size: 1rem; */
+  /*  font-size: 1rem; */
 }
 header nav .nav__list {
   display: flex;
@@ -549,73 +568,54 @@ h1 {
     margin-bottom: 0;
   }
 }
-/* @keyframes parpaderar{
-    0%{
-        opacity: .0;
-    }
-    25%{
-        opacity: .1;
-        @include box-shadow(red);
-    }
-    50%{
-        opacity: .2;
-        @include box-shadow(blue);
-    }
-    75%{
-        opacity: .3;
-        @include box-shadow(green);
-    }
-    100%{
-        opacity: .4;
-        @include box-shadow(rgb(128, 0, 102));
-    }
-} */
 /*HACE BALANCERAR EL ELEMENTO*/
 .elemento-balancear {
   animation: animacion-balancear 1s ease-in-out infinite;
+  /*  background-color: black; */
 }
 
 @keyframes animacion-balancear {
   0% {
     transform: translateZ(0) rotateZ(0deg);
   }
-  /*  25% { transform: translateZ(50px) rotateZ(2.5deg); } */
   50% {
     transform: translateZ(50px) rotateZ(2.5deg);
   }
-  /* 75% { transform: translateZ(50px) rotateZ(-2.5deg); }
-  75% { transform: translateZ(50px) rotateZ(-5deg); } */
   100% {
     transform: translateZ(0) rotateZ(0deg);
   }
 }
-@keyframes animacion-aparecer {
-  /* from{
-      opacity: 0;
+/* .contenedor .relleno{
+    position: absolute;
+    margin: auto;
+    transition: relleno 1s ease-in;
+    z-index: -1;
+    width: 90%;
+    background-color: white;
+    animation-name: relleno-liquido;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;  
+} */
+@keyframes relleno-liquido {
+  0% {
+    height: 10%;
+    width: 2%;
+    top: 0;
+    right: 50%;
   }
-  to{
-      opacity: 1;
-  } */
-  /* 
-      from { transform: translatez(-100%); background-color: black;}
-      to { transform: translatez(0); background-color: red;} */
-  from {
-    transform: translatex(-100%);
-    background-color: black;
+  50% {
+    height: 50%;
+    width: 25%;
+    top: 0;
+    right: 25%;
   }
-  to {
-    transform: translatex(0%);
-    background-color: red;
+  100% {
+    top: 0;
+    right: 0;
+    height: 90%;
+    width: 100%;
   }
-}
-.elemento-aparecer {
-  animation: animacion-aparecer 1s ease-in-out forwards;
-  /*  animation-name: animacion-aparecer;
-   animation-fill-mode: both;
-   animation-timeline: view() !important;
-   animation-timing-function: linear !important; */
-  /* animation-range-start: cover 0% !important;
-  animation-range-end: cover 100% !important; */
 }
 
 /*# sourceMappingURL=style.css.map */
