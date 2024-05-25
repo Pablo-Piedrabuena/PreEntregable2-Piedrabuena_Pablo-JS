@@ -1,10 +1,9 @@
 @import "../utilities/variables";
-
+/*-LAYOUT_Descripcion Principal: Para Todos los p con esta clase*/
 .descripcion-principal{
     p{
         @include fuente-texto(1rem,400);
-       /*  font-size: 1rem;
-        font-weight: 400; */
+        color:$color-texto;
         text-align: center;
         width: 80%;
         margin: auto;

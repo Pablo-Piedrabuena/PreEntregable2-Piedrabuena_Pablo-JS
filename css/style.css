@@ -1,3 +1,5 @@
+/*BASE:*/
+/*-Reset*/
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +8,15 @@ body {
   box-sizing: border-box;
 }
 
-/*LAYOUT*/
+/*-Mixins: Fuentes*/
+/*-Mixins: sobra*/
+/*-Mixins: estilo imagen*/
+/*LAYOUT:*/
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/*-LAYOUT_Header: Logo y Menu de Navegacion*/
 header {
   display: flex;
   background-color: #135D87;
@@ -46,7 +56,6 @@ header .btn-toggle {
 header nav {
   user-select: none;
   display: flex;
-  /*  font-size: 1rem; */
 }
 header nav .nav__list {
   display: flex;
@@ -65,7 +74,6 @@ header nav .nav__list .list__item a, header nav .nav__list .list__item .item__dr
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  /* font-weight: 400; */
   color: white;
   text-decoration: none;
 }
@@ -73,7 +81,6 @@ header nav .nav__list .list__item label, header nav .nav__list .list__item .cont
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  /* font-weight: 400; */
   color: white;
   text-decoration: none;
 }
@@ -91,7 +98,6 @@ header nav .nav__list .list__item .item__dropdown .dropdown__item a {
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  /* font-weight: 400; */
   color: white;
   text-decoration: none;
 }
@@ -99,29 +105,41 @@ header nav .nav__list .list__item:hover .item__dropdown, header nav .nav__list .
   display: block;
 }
 
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/*-LAYOUT_Titulo Principal: Para Todos los H1*/
 h1 {
   font-family: "Barlow", sans-serif;
   font-size: 2.5rem;
   font-weight: 600;
-  /* font-size: 2.5rem; */
   color: #135D87;
-  /* font-weight: 600; */
   text-align: center;
   border-top: 1px solid #aaa;
   padding-top: 0.5rem;
 }
 
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/*-LAYOUT_Descripcion Principal: Para Todos los p con esta clase*/
 .descripcion-principal p {
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  /*  font-size: 1rem;
-   font-weight: 400; */
+  color: #34495E;
   text-align: center;
   width: 80%;
   margin: auto;
 }
 
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/*-LAYOUT_Contenedor Tarjeta: Para todos los contenedores de tarjetas*/
 .contenedor__tarjeta {
   display: grid;
   margin: 1rem auto;
@@ -133,10 +151,14 @@ h1 {
   width: 80%;
   border-radius: 1rem;
   box-shadow: 0px -2px 36px -16px #135D87;
-  /*  box-shadow: 0px -2px 36px -16px $color-celeste; */
   margin-bottom: 3rem;
 }
 
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/*-LAYOUT_Contenedor Galeria productos: Para todos los contenedores*/
 .galeria__productos {
   display: flex;
   flex-wrap: wrap;
@@ -146,9 +168,13 @@ h1 {
   width: 80%;
   border-radius: 1rem;
   box-shadow: 0px -2px 36px -16px #135D87;
-  /*  box-shadow: 0px -2px 36px -16px $color-celeste; */
 }
 
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/*-LAYOUT_Contenedor Contactos: Contenedor form Contactos*/
 .contenedor__contacto {
   display: flex;
   flex-wrap: wrap;
@@ -157,9 +183,13 @@ h1 {
   border-radius: 1rem;
   box-sizing: border-box;
   box-shadow: 0px -2px 36px -16px #135D87;
-  /* box-shadow: 0px -2px 36px -16px $color-celeste; */
 }
 
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/*-LAYOUT_Contenedor Footer:*/
 .contenedor-footer {
   display: flex;
   flex-wrap: wrap;
@@ -174,21 +204,18 @@ h1 {
   font-family: "Barlow", sans-serif;
   font-size: 1.2rem;
   font-weight: bold;
-  /* font-size: 1.2rem; */
   color: #E6E6E6;
 }
 .contenedor-footer .contenedor-footer__columna p {
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  /* font-size: 1rem; */
   color: #E6E6E6;
 }
 .contenedor-footer .contenedor-footer__columna a {
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  /* font-size: 1rem; */
   color: #E6E6E6;
 }
 .contenedor-footer .contenedor-footer__columna a img {
@@ -212,8 +239,12 @@ h1 {
   text-align: center;
 }
 
-/*COMPONENTS*/
-/* @import "../utilities/mixins"; */
+/*COMPONENTS:*/
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/*-COMPONENTS_Tarjeta Uno: Estilo Texto Izquierda, Imagen Derecha*/
 .item--texto {
   grid-column: 1/2;
   grid-row: 1/4;
@@ -223,6 +254,7 @@ h1 {
   font-weight: 400;
   margin: auto;
   text-align: justify;
+  color: #34495E;
 }
 
 .item--imagen {
@@ -237,13 +269,13 @@ h1 {
   object-fit: cover;
   border-radius: 10px;
   margin: auto;
-  /*  width: 100%;
-   object-fit:cover;
-   border-radius: 10px;
-   margin: auto; */
 }
 
-/* @import "../utilities/mixins"; */
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/*-COMPONENTS_Tarjeta Dos: Estilo Texto Derecha, Imagen Izquierda<*/
 .item--textoDos {
   grid-column: 2/3;
   grid-row: 1/4;
@@ -253,6 +285,7 @@ h1 {
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
   font-weight: 400;
+  color: #34495E;
 }
 
 .item--imagenDos {
@@ -267,12 +300,13 @@ h1 {
   object-fit: cover;
   border-radius: 10px;
   margin: auto;
-  /* width: 100%;
-  object-fit:cover;
-  border-radius: 10px;
-  margin: auto; */
 }
 
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/*-COMPONENTS_Tarjeta Tres: Titulo, Parrafo e Imagenes c/Leyenda*/
 .tarjeta--filosofia-calidad {
   display: flex;
   flex-wrap: wrap;
@@ -282,13 +316,13 @@ h1 {
   width: 80%;
   border-radius: 1rem;
   box-shadow: 0px -2px 36px -16px #135D87;
-  /* box-shadow: 0px -2px 36px -16px $color-celeste; */
   align-items: center;
 }
 .tarjeta--filosofia-calidad h2, .tarjeta--filosofia-calidad p {
   font-family: "Barlow", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
+  color: #34495E;
   display: block;
   width: 100%;
   margin: 0.5rem;
@@ -302,46 +336,42 @@ h1 {
   float: none;
   width: 10rem;
   box-sizing: border-box;
-  /* font-size: 1rem; */
 }
 .tarjeta--filosofia-calidad .tarjeta--filosofia__item img {
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
   margin: auto;
-  /* width: 100%;
-  object-fit:cover;
-  border-radius: 10px; */
 }
 .tarjeta--filosofia-calidad .tarjeta--filosofia__item figcaption {
   text-align: center;
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  /* font-family: 'Barlow', sans-serif;
-  font-size: 1rem; */
+  color: #34495E;
 }
 
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/*-COMPONENTS__Productos: Item del Contenedor Galeria productos*/
 .productos__item {
   width: 20rem;
   height: auto;
   box-sizing: border-box;
   margin: 1rem;
 }
-.productos__item:hover {
-  /* transform: scale(1.2,1.2); */
-  /* transition: transform 1s; */
-  /* transition: all 1s */
-  /* transform: rotate(45deg); */
-}
 .productos__item img {
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
   margin: auto;
-  /* width: 100%;
-  object-fit:cover;
-  border-radius: 10px; */
+}
+.productos__item img:hover {
+  transform: scale(1.2, 1.2);
+  transition: transform 1s;
+  transition: all 1s;
 }
 .productos__item figcaption {
   text-align: center;
@@ -349,15 +379,17 @@ h1 {
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  /* font-family: 'Barlow', sans-serif;
-  font-size: 1rem; */
   background-color: #135D87;
   color: #E6E6E6;
   height: 2.5rem;
   border-radius: 0px 5px 0px 5px;
 }
 
-/* @import "../utilities/mixins"; */
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/*-COMPONENTS__formulario Contacto: Formulario y Mapa*/
 .contacto__formulario {
   display: flex;
   flex: 1;
@@ -368,8 +400,8 @@ h1 {
   font-family: "Barlow", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
+  color: #34495E;
   text-align: center;
-  /* font-size: 1.5rem; */
   width: 90%;
 }
 .contacto__formulario label, .contacto__formulario textarea, .contacto__formulario input {
@@ -378,9 +410,8 @@ h1 {
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
   font-weight: 400;
+  color: #34495E;
   width: 90%;
-  /* font-family: 'Barlow', sans-serif; */
-  /* font-size: 1rem; */
   align-items: center;
 }
 .contacto__formulario input {
@@ -416,17 +447,24 @@ h1 {
   font-family: "Barlow", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
+  color: #34495E;
   text-align: center;
-  /* font-size: 1.5rem; */
 }
 .contacto__mapa iframe {
   margin: 0.5rem auto;
-  /* @include fuente-texto(1rem,bold); */
-  /* font-size: 1rem; */
   width: 90%;
 }
 
-/*UTILITIES*/
+/*UTILITIES:*/
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/*-UTILITIES__Media Query Small: Para la vista Mobile*/
 @media screen and (max-width: 427px) {
   header a {
     display: inline-block;
@@ -504,13 +542,11 @@ h1 {
     border-radius: 5px 5px 5px 5px;
     margin-bottom: 2rem;
     box-shadow: 0px -2px 36px -16px #135D87;
-    /* box-shadow: 0px -2px 36px -16px $color-celeste; */
   }
   .contenedor__contacto .contacto__mapa {
     width: 100%;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0px -2px 36px -16px #135D87;
-    /* box-shadow: 0px -2px 36px -16px $color-celeste; */
   }
   .contenedor-footer {
     flex-direction: column;
@@ -527,6 +563,11 @@ h1 {
     margin-bottom: 0;
   }
 }
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/*-UTILITIES__Media Query Medium: Para la vista Tablet*/
 @media screen and (min-width: 427px) and (max-width: 767px) {
   .contenedor__tarjeta {
     display: flex;
@@ -546,13 +587,11 @@ h1 {
     border-radius: 5px 5px 5px 5px;
     margin-bottom: 2rem;
     box-shadow: 0px -2px 36px -16px #135D87;
-    /* box-shadow: 0px -2px 36px -16px var(--color-Celeste); */
   }
   .contenedor__contacto .contacto__mapa {
     width: 100%;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0px -2px 36px -16px #135D87;
-    /* box-shadow: 0px -2px 36px -16px var(--color-Celeste); */
   }
   .contenedor-footer {
     flex-direction: column;
@@ -568,12 +607,22 @@ h1 {
     margin-bottom: 0;
   }
 }
-/*HACE BALANCERAR EL ELEMENTO*/
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/*-UTILITIES__Media Query Large: Para la vista Desktop en Caso de NECESITAR*/
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/*-UTILITIES__Animaciones:*/
+/*--Animaciones: Clase C/Animacion Aplicada*/
 .elemento-balancear {
   animation: animacion-balancear 1s ease-in-out infinite;
-  /*  background-color: black; */
 }
 
+/*--Animaciones: Hacer balancear elemento*/
 @keyframes animacion-balancear {
   0% {
     transform: translateZ(0) rotateZ(0deg);
@@ -585,18 +634,8 @@ h1 {
     transform: translateZ(0) rotateZ(0deg);
   }
 }
-/* .contenedor .relleno{
-    position: absolute;
-    margin: auto;
-    transition: relleno 1s ease-in;
-    z-index: -1;
-    width: 90%;
-    background-color: white;
-    animation-name: relleno-liquido;
-    animation-timing-function:linear;
-    animation-iteration-count: infinite;
-    animation-duration: 5s;  
-} */
+/*--Animaciones: hacer que elemento vaya creciendo y posicionandose
+                para dar el efecto que la imagen se llena de blanco*/
 @keyframes relleno-liquido {
   0% {
     height: 10%;

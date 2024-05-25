@@ -1,5 +1,6 @@
 @import "../utilities/variables";
 
+/*-UTILITIES__Media Query Small: Para la vista Mobile*/
 @media screen and (max-width: 427px){
     header{
         a{
@@ -84,13 +85,11 @@
             border-radius: 5px 5px 5px 5px;
             margin-bottom: 2rem;
             @include box-shadow($color-celeste);
-            /* box-shadow: 0px -2px 36px -16px $color-celeste; */
         }
         .contacto__mapa{
             width: 100%;
             border-radius: 5px 5px 5px 5px;
             @include box-shadow($color-celeste);
-            /* box-shadow: 0px -2px 36px -16px $color-celeste; */
         }
     }
     

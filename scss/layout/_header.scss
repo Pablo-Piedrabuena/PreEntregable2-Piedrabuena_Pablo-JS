@@ -1,4 +1,5 @@
 @import "../utilities/variables";
+/*-LAYOUT_Header: Logo y Menu de Navegacion*/
 header{
     display: flex;
     background-color: $color-celeste;
@@ -42,7 +43,6 @@ header{
     nav{
         user-select: none;
         display: flex;
-       /*  font-size: 1rem; */
         .nav__list{
             display: flex;
             margin-bottom: 0;
@@ -56,13 +56,11 @@ header{
                 padding: 0.5rem;
                 a{
                     @include fuente-texto(1rem,400);
-                    /* font-weight: 400; */
                     color: white;
                     text-decoration: none;
                 }
                 label{
                     @include fuente-texto(1rem,400);
-                    /* font-weight: 400; */
                     color: white;
                     text-decoration: none;
                 }
@@ -79,7 +77,6 @@ header{
                         @extend .list__item;
                         a{
                             @include fuente-texto(1rem,400);
-                            /* font-weight: 400; */
                             color: white;
                             text-decoration: none;
                         }

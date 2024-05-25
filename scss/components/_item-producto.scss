@@ -1,29 +1,22 @@
 @import "../utilities/variables";
+/*-COMPONENTS__Productos: Item del Contenedor Galeria productos*/
 .productos__item{
     width: 20rem;
     height: auto;
     box-sizing: border-box;
     margin: 1rem;
-    &:hover{
-        /* transform: scale(1.2,1.2); */
-        /* transition: transform 1s; */
-        /* transition: all 1s */
-        
-        /* transform: rotate(45deg); */
-    }
     img{
         @include estilo-imagen;
-        /* width: 100%;
-        object-fit:cover;
-        border-radius: 10px; */
-        
+        &:hover{
+            transform: scale(1.2,1.2);
+            transition: transform 1s;
+            transition: all 1s
+        }
     }
     figcaption{
         text-align:center;
         align-content: center;
         @include fuente-texto(1rem,400);
-        /* font-family: 'Barlow', sans-serif;
-        font-size: 1rem; */
         background-color: $color-celeste;
         color: $colorgris-claro;
         height: 2.5rem;

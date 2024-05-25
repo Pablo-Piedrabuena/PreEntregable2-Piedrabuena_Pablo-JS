@@ -1,6 +1,5 @@
 @import "../utilities/variables";
-/* @import "../utilities/mixins"; */
-
+/*-COMPONENTS__formulario Contacto: Formulario y Mapa*/
 .contacto__formulario{
     display: flex;
     flex: 1;
@@ -8,17 +7,16 @@
     h3{
         display: block;
         @include fuente-texto(1.5rem,bold);
+        color:$color-texto;
         text-align: center;
-        /* font-size: 1.5rem; */
         width: 90%;
     }
     label{
         display: block;
         margin: .2rem auto;
         @include fuente-texto(1rem,400);
+        color:$color-texto;
         width: 90%;
-        /* font-family: 'Barlow', sans-serif; */
-        /* font-size: 1rem; */
         align-items: center;
     }
     input{
@@ -55,13 +53,11 @@
     width: 50%;
     h3{
         @include fuente-texto(1.5rem,bold);
+        color:$color-texto;
         text-align: center;
-        /* font-size: 1.5rem; */
     }
     iframe{
         margin: .5rem auto;
-        /* @include fuente-texto(1rem,bold); */
-        /* font-size: 1rem; */
         width: 90%;
     }
 }

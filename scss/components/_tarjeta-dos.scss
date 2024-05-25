@@ -1,6 +1,5 @@
 @import "../utilities/variables";
-/* @import "../utilities/mixins"; */
-
+/*-COMPONENTS_Tarjeta Dos: Estilo Texto Derecha, Imagen Izquierda<*/
     .item--textoDos{
         grid-column: 2/3;
         grid-row: 1/4; 
@@ -8,6 +7,7 @@
         margin: auto;
         text-align: justify;
         @include fuente-texto(1rem,400);
+        color:$color-texto;
     }
     .item--imagenDos{
         grid-column: 1/2;
@@ -17,9 +17,5 @@
         text-align: left;
         img{
             @include estilo-imagen;
-            /* width: 100%;
-            object-fit:cover;
-            border-radius: 10px;
-            margin: auto; */
         }
     }

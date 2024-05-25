@@ -1,31 +1,21 @@
 @import "./variables";
 
+/*-UTILITIES__Animaciones:*/
 
-/*HACE BALANCERAR EL ELEMENTO*/
+/*--Animaciones: Clase C/Animacion Aplicada*/
 .elemento-balancear {
     animation: animacion-balancear 1s ease-in-out infinite;
-   /*  background-color: black; */
 }
 
+/*--Animaciones: Hacer balancear elemento*/
 @keyframes animacion-balancear {
     0% { transform: translateZ(0) rotateZ(0deg); }
     50% { transform: translateZ(50px) rotateZ(2.5deg); }
     100% { transform: translateZ(0) rotateZ(0deg); }
 }
 
-
-/* .contenedor .relleno{
-    position: absolute;
-    margin: auto;
-    transition: relleno 1s ease-in;
-    z-index: -1;
-    width: 90%;
-    background-color: white;
-    animation-name: relleno-liquido;
-    animation-timing-function:linear;
-    animation-iteration-count: infinite;
-    animation-duration: 5s;  
-} */
+/*--Animaciones: hacer que elemento vaya creciendo y posicionandose
+                para dar el efecto que la imagen se llena de blanco*/
 @keyframes relleno-liquido{
     0%{
         height: 10%;

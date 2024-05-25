@@ -1,5 +1,5 @@
 @import "../utilities/variables";
-
+/*-LAYOUT_Contenedor Contactos: Contenedor form Contactos*/
 .contenedor__contacto{
     display: flex;
     flex-wrap: wrap;
@@ -8,5 +8,4 @@
     border-radius: 1rem;
     box-sizing: border-box;
     @include box-shadow($color-celeste);
-    /* box-shadow: 0px -2px 36px -16px $color-celeste; */
 }

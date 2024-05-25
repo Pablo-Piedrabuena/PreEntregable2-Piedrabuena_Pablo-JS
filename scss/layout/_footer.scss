@@ -1,5 +1,6 @@
 @import "../utilities/variables";
 
+/*-LAYOUT_Contenedor Footer:*/
 .contenedor-footer {
     display: flex;
     flex-wrap: wrap;
@@ -10,17 +11,14 @@
         padding: 0.5rem 0.5rem;
         h3{
             @include fuente-texto(1.2rem,bold);
-            /* font-size: 1.2rem; */
             color:$colorgris-claro;
         }
         p{
             @include fuente-texto(1rem,400);
-            /* font-size: 1rem; */
             color: $colorgris-claro;
         }
         a{
             @include fuente-texto(1rem,400);
-            /* font-size: 1rem; */
             color: $colorgris-claro;
             img {
                 object-fit:cover;
