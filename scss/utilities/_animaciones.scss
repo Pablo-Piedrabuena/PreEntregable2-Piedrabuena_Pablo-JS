@@ -36,3 +36,19 @@
         width: 100%;
     }
 }
+
+/*--Animaciones: hacer que el boton whatasapp genere un pulso*/
+@keyframes pulso {
+    0% {
+        box-shadow: 0 0 0 0 #2BF113;
+    }
+    30% {
+        box-shadow: 0 0 0 20px rgba(239,76,53, 0);
+    }
+    70% {
+        box-shadow: 0 0 0 0px rgba(239,76,53, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0px #25D366;
+    }
+}

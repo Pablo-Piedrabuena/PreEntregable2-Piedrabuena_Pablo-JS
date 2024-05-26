@@ -12,6 +12,15 @@ body {
 /*-Mixins: sobra*/
 /*-Mixins: estilo imagen*/
 /*LAYOUT:*/
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  animation: pulso 2s infinite linear;
+  border-radius: 50%;
+}
+
 /*Para Fondos*/
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
@@ -654,6 +663,21 @@ h1 {
     right: 0;
     height: 90%;
     width: 100%;
+  }
+}
+/*--Animaciones: hacer que el boton whatasapp genere un pulso*/
+@keyframes pulso {
+  0% {
+    box-shadow: 0 0 0 0 #2BF113;
+  }
+  30% {
+    box-shadow: 0 0 0 20px rgba(239, 76, 53, 0);
+  }
+  70% {
+    box-shadow: 0 0 0 0px rgba(239, 76, 53, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0px #25D366;
   }
 }
 
