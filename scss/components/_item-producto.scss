@@ -5,13 +5,15 @@
     height: auto;
     box-sizing: border-box;
     margin: 1rem;
-    img{
-        @include estilo-imagen;
-        &:hover{
-            transform: scale(1.2,1.2);
-            transition: transform 1s;
-            transition: all 1s
-        }
+    picture{
+        img{
+            @include estilo-imagen;
+            &:hover{
+                transform: scale(1.2,1.2);
+                transition: transform 1s;
+                transition: all 1s
+            }
+    }
     }
     figcaption{
         text-align:center;

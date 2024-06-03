@@ -27,8 +27,10 @@
         float: none;
         width: 10rem;
         box-sizing: border-box;
-        img{
-            @include estilo-imagen;
+        picture{
+            img{
+                @include estilo-imagen;
+            }
         }
         figcaption{
             text-align: center;

@@ -15,7 +15,9 @@
         margin: auto;
         width: 100%;
         text-align: right;
-        img{
-            @include estilo-imagen;
+        picture{
+            img{
+                @include estilo-imagen;
+            }
         }
     }

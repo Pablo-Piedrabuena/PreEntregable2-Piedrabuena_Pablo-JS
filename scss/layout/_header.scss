@@ -9,15 +9,17 @@ header{
     position: sticky;
     top: 0px;
     z-index: 1;
-    padding-bottom: 0.5rem;
+    padding-bottom: .5rem;
     .contenedor-logo{
         position: relative;
         width: 5rem;
         margin: 0;
         a{
-            img{
-                width: 100%;
-                object-fit: contain;
+            picture{
+                img{
+                    width: 100%;
+                    object-fit: contain;
+                }
             }
         }
 
