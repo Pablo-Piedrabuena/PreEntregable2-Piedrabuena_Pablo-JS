@@ -49,7 +49,6 @@ header .contenedor-logo a picture img {
 header .contenedor-logo .relleno {
   position: absolute;
   margin: auto;
-  transition: relleno 1s ease-in;
   z-index: -1;
   width: 90%;
   background-color: white;
