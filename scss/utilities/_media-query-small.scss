@@ -98,8 +98,10 @@
         .contenedor-footer__columna {
             flex: 1; /* Cada columna ocupa todo el ancho disponible */
             border-bottom: 1px solid $colorgris-claro;
-            padding-bottom: 1rem 1rem;
             text-align: center;
+            a{
+                display: block;
+            }
         }
         .columna__parrafo{
             padding-bottom: 0;

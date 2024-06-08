@@ -558,8 +558,10 @@ h1 {
   .contenedor-footer .contenedor-footer__columna {
     flex: 1; /* Cada columna ocupa todo el ancho disponible */
     border-bottom: 1px solid #E6E6E6;
-    padding-bottom: 1rem 1rem;
     text-align: center;
+  }
+  .contenedor-footer .contenedor-footer__columna a {
+    display: block;
   }
   .contenedor-footer .columna__parrafo {
     padding-bottom: 0;
@@ -601,9 +603,11 @@ h1 {
     flex-direction: column;
   }
   .contenedor-footer .contenedor-footer__columna {
-    border-bottom: 1px solid var(--color-gris-claro);
-    padding-bottom: 1rem 1rem;
+    border-bottom: 1px solid #E6E6E6;
     text-align: center;
+  }
+  .contenedor-footer .contenedor-footer__columna a {
+    display: block;
   }
   .contenedor-footer .columna__parrafo {
     padding-bottom: 0;
