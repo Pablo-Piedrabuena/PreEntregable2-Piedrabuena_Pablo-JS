@@ -133,14 +133,26 @@ h1 {
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
 /*-LAYOUT_Descripcion Principal: Para Todos los p con esta clase*/
-.descripcion-principal p {
+.descripcion-principal {
+  align-items: center;
+}
+.descripcion-principal h2, .descripcion-principal p {
   font-family: "Barlow", sans-serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: #34495E;
   text-align: center;
   width: 80%;
-  margin: auto;
+  margin: 1rem auto;
+}
+.descripcion-principal p {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  /* color:$color-texto;
+  text-align: center;
+  width: 80%;
+  margin: auto; */
 }
 
 /*Para Fondos*/
