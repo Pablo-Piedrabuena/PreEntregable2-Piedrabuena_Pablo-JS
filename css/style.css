@@ -574,9 +574,14 @@ h1 {
     flex: 1; /* Cada columna ocupa todo el ancho disponible */
     border-bottom: 1px solid #E6E6E6;
     text-align: center;
+    /* a:not(.email){
+        display: inline;
+        flex-wrap: wrap;
+    } */
   }
   .contenedor-footer .contenedor-footer__columna a {
     display: block;
+    margin: 1rem;
   }
   .contenedor-footer .columna__parrafo {
     padding-bottom: 0;
@@ -618,11 +623,15 @@ h1 {
     flex-direction: column;
   }
   .contenedor-footer .contenedor-footer__columna {
+    flex: 1; /* Cada columna ocupa todo el ancho disponible */
     border-bottom: 1px solid #E6E6E6;
     text-align: center;
   }
   .contenedor-footer .contenedor-footer__columna a {
     display: block;
+  }
+  .contenedor-footer .contenedor-footer__columna a:not(.email) {
+    display: inline;
   }
   .contenedor-footer .columna__parrafo {
     padding-bottom: 0;
