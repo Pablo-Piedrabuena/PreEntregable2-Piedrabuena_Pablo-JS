@@ -8,6 +8,10 @@ body {
   box-sizing: border-box;
 }
 
+strong, em {
+  font-weight: normal;
+}
+
 /*-Mixins: Fuentes*/
 /*-Mixins: sobra*/
 /*-Mixins: estilo imagen*/
