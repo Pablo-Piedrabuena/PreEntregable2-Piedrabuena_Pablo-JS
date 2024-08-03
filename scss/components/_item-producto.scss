@@ -1,6 +1,6 @@
 @import "../utilities/variables";
 /*-COMPONENTS__Productos: Item del Contenedor Galeria productos*/
-.productos__item{
+/* .productos__item{
     width: 20rem;
     height: auto;
     box-sizing: border-box;
@@ -24,4 +24,84 @@
         height: 2.5rem;
         border-radius: 0px 5px 0px 5px;
     }
+} */
+
+
+/* .productos__item22{
+    width: 20rem;
+    height: auto;
+    box-sizing: border-box;
+    margin: 1rem;
+    picture{
+        img{
+            @include estilo-imagen;
+            &:hover{
+                transform: scale(1.2,1.2);
+                transition: transform 1s;
+                transition: all 1s
+            }
+    }
+    }
+    figcaption{
+        text-align:center;
+        align-content: center;
+        @include fuente-texto(1.2rem,900);
+        color: $color-celeste;
+    }
+    p{
+        text-align:center;
+        align-content: center;
+        @include fuente-texto(1rem,400);
+    }
+} */
+
+.productos__item{
+    width: 20rem;
+    height: auto;
+    box-sizing: border-box;
+    margin: 1rem;
+    figure{
+        margin: 0;
+        img{
+            @include estilo-imagen;
+            &:hover{
+                transform: scale(1.2,1.2);
+                transition: transform 1s;
+                transition: all 1s
+            }
+        }
+        figcaption{
+            text-align:center;
+            align-content: center;
+            @include fuente-texto(1.2rem,400);
+            color: $color-celeste;
+        }
+    
+    }
+    .item-infoProducto{
+        .infoProducto-descripcion{
+            margin: 0;
+            text-align:center;
+            align-content: center;
+            @include fuente-texto(1rem,400);
+        }
+        .infoProducto-precio{
+            @extend .infoProducto-descripcion;
+           margin-top: .3rem;
+           margin-bottom: .3rem;
+            @include fuente-texto(1.2rem,600);
+            color: $color-celeste;
+        }
+        button{
+            text-align:center;
+            align-content: center;
+            width: 100%;
+            @include fuente-texto(1rem,400);
+            background-color: $color-celeste;
+            color: $colorgris-claro;
+            height: 2rem;
+            border-radius: 0px 5px 0px 5px;
+        }
+    }
+
 }
