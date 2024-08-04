@@ -194,111 +194,113 @@ const productos = [
 let varFiltro="Crema"
 let productosPorCategoria
 
-/* let productosPorCategoria=productos.filter((el)=>{
-    return el.categoria===varFiltro
-}) */
-
+//EJECUTO FUNCION/ES LUEGO DE QUE SE CARGUE EL DOM
+document.addEventListener('DOMContentLoaded', () => {
+    filtraProductos("Todos")
+});
 
 const nodoPadre = document.getElementById("galeriaProductos");
-const boton = document.getElementById("filtroTodosLosProductos");
-const boton2 = document.getElementById("filtroQuesos");
-const boton3 = document.getElementById("filtroCremaLeche");
-const boton4 = document.getElementById("filtroManteca");
-const boton5 = document.getElementById("filtroLeche");
+const btnMuestraTodosLosProductos = document.getElementById("filtroTodosLosProductos");
+const btnMuestraProdcutoQueso = document.getElementById("filtroQuesos");
+const btnMuestraProdcutoCrema = document.getElementById("filtroCremaLeche");
+const btnMuestraProdcutoManteca = document.getElementById("filtroManteca");
+const btnMuestraProdcutoLeche = document.getElementById("filtroLeche");
+const itemFiltroPorProducto = document.querySelectorAll(".section-filtro nav ul li a")
 
-boton.addEventListener("click", ()=>{
+
+function filtraProductos(categoria){
     nodoPadre.innerHTML=""
-    productos.forEach((el)=> {
-        nodoPadre.innerHTML +=`<article class="productos__item">
-            <figure>
-                <img src="${el.img}">
-                <figcaption><strong>${el.nombre}</strong></figcaption>
-            </figure>
-            <div class="item-infoProducto">
-                <p class="infoProducto-descripcion">${el.descripción}</p>
-                <p class="infoProducto-precio">$ ${el.precio.toFixed(2)}</p>
-                <button type="boton">Añadir al carrito</button>
-            </div>
-        </article>` 
-    })
-})
-boton2.addEventListener("click", ()=>{
-    nodoPadre.innerHTML=""
-    varFiltro="Queso"
+    varFiltro=categoria
     productosPorCategoria=productos.filter((el)=>{
         return el.categoria===varFiltro
     })
-    productosPorCategoria.forEach((el)=> {
-        nodoPadre.innerHTML +=`<article class="productos__item">
-            <figure>
-                <img src="${el.img}">
-                <figcaption><strong>${el.nombre}</strong></figcaption>
-            </figure>
-            <div class="item-infoProducto">
-                <p class="infoProducto-descripcion">${el.descripción}</p>
-                <p class="infoProducto-precio">$ ${el.precio.toFixed(2)}</p>
-                <button type="boton">Añadir al carrito</button>
-            </div>
-        </article>` 
-    })
+    if(categoria==="Todos"){
+        nodoPadre.innerHTML=""
+        productos.forEach((el)=> {
+            nodoPadre.innerHTML +=`<article class="productos__item">
+                <figure>
+                    <img src="${el.img}">
+                    <figcaption><strong>${el.nombre}</strong></figcaption>
+                </figure>
+                <div class="item-infoProducto">
+                    <p class="infoProducto-descripcion">${el.descripción}</p>
+                    <p class="infoProducto-precio">$ ${el.precio.toFixed(2)}</p>
+                    <button type="boton">Comprar</button>
+                </div>
+            </article>` 
+        })
+    }else{
+        productosPorCategoria.forEach((el)=> {
+            nodoPadre.innerHTML +=`<article class="productos__item">
+                <figure>
+                    <img src="${el.img}">
+                    <figcaption><strong>${el.nombre}</strong></figcaption>
+                </figure>
+                <div class="item-infoProducto">
+                    <p class="infoProducto-descripcion">${el.descripción}</p>
+                    <p class="infoProducto-precio">$ ${el.precio.toFixed(2)}</p>
+                    <button type="boton">Comprar</button>
+                </div>
+            </article>` 
+        })
+    }
+    
+}
+
+btnMuestraTodosLosProductos.addEventListener("click", (e)=>{
+    filtraProductos("Todos")
+    //Quita la Clase elemento-seleccionado de todos los a
+    itemFiltroPorProducto.forEach(li => {
+        li.classList.remove('elemento-seleccionado');
+        /* console.log(li) */
+    });
+
+    //Agregamos la Clase elemento-seleccionado al elemento clickeado
+    e.target.classList.add('elemento-seleccionado');    
 })
-boton3.addEventListener("click", ()=>{
-    nodoPadre.innerHTML=""
-    varFiltro="Crema"
-    productosPorCategoria=productos.filter((el)=>{
-        return el.categoria===varFiltro
-    })
-    productosPorCategoria.forEach((el)=> {
-        nodoPadre.innerHTML +=`<article class="productos__item">
-            <figure>
-                <img src="${el.img}">
-                <figcaption><strong>${el.nombre}</strong></figcaption>
-            </figure>
-            <div class="item-infoProducto">
-                <p class="infoProducto-descripcion">${el.descripción}</p>
-                <p class="infoProducto-precio">$ ${el.precio.toFixed(2)}</p>
-                <button type="boton">Añadir al carrito</button>
-            </div>
-        </article>` 
-    })
+
+btnMuestraProdcutoQueso.addEventListener("click", (e)=>{
+    filtraProductos("Queso")
+    //Quita la Clase elemento-seleccionado de todos los a
+    itemFiltroPorProducto.forEach(li => {
+        li.classList.remove('elemento-seleccionado');
+        /* console.log(li) */
+    });
+
+    //Agregamos la Clase elemento-seleccionado al elemento clickeado
+    e.target.classList.add('elemento-seleccionado');   
 })
-boton4.addEventListener("click", ()=>{
-    nodoPadre.innerHTML=""
-    varFiltro="Manteca"
-    productosPorCategoria=productos.filter((el)=>{
-        return el.categoria===varFiltro
-    })
-    productosPorCategoria.forEach((el)=> {
-        nodoPadre.innerHTML +=`<article class="productos__item">
-            <figure>
-                <img src="${el.img}">
-                <figcaption><strong>${el.nombre}</strong></figcaption>
-            </figure>
-            <div class="item-infoProducto">
-                <p class="infoProducto-descripcion">${el.descripción}</p>
-                <p class="infoProducto-precio">$ ${el.precio.toFixed(2)}</p>
-                <button type="boton">Añadir al carrito</button>
-            </div>
-        </article>` 
-    })
+btnMuestraProdcutoCrema.addEventListener("click", (e)=>{
+    filtraProductos("Crema")
+    //Quita la Clase elemento-seleccionado de todos los a
+    itemFiltroPorProducto.forEach(li => {
+        li.classList.remove('elemento-seleccionado');
+        /* console.log(li) */
+    });
+
+    //Agregamos la Clase elemento-seleccionado al elemento clickeado
+    e.target.classList.add('elemento-seleccionado');  
 })
-boton5.addEventListener("click", ()=>{
-    nodoPadre.innerHTML=""
-    varFiltro="Leche"
-    productosPorCategoria=productos.filter((el)=>{
-        return el.categoria===varFiltro
-    })
-    productosPorCategoria.forEach((el)=> {
-        nodoPadre.innerHTML +=`<article class="productos__item">
-            <figure>
-                <img src="${el.img}">
-                <figcaption><strong>${el.nombre}</strong></figcaption>
-            </figure>
-            <div class="item-infoProducto">
-                <p class="infoProducto-descripcion">${el.descripción}</p>
-                <p class="infoProducto-precio">$ ${el.precio.toFixed(2)}</p>
-                <button type="boton">Añadir al carrito</button>
-            </div>
-        </article>` 
-    })
+btnMuestraProdcutoManteca.addEventListener("click", (e)=>{
+    filtraProductos("Manteca")
+    //Quita la Clase elemento-seleccionado de todos los a
+    itemFiltroPorProducto.forEach(li => {
+        li.classList.remove('elemento-seleccionado');
+        /* console.log(li) */
+    });
+
+    //Agregamos la Clase elemento-seleccionado al elemento clickeado
+    e.target.classList.add('elemento-seleccionado');  
+})
+
+btnMuestraProdcutoLeche.addEventListener("click", (e)=>{
+    filtraProductos("Leche")
+    //Quita la Clase elemento-seleccionado de todos los a
+    itemFiltroPorProducto.forEach(li => {
+        li.classList.remove('elemento-seleccionado');
+        /* console.log(li) */
+    });
+
+    //Agregamos la Clase elemento-seleccionado al elemento clickeado
+    e.target.classList.add('elemento-seleccionado');  
 })

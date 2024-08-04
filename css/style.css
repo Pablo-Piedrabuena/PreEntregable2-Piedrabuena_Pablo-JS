@@ -1,5 +1,9 @@
 /*BASE:*/
 /*-Reset*/
+:root {
+  --color-celeste: #007bff;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -294,6 +298,10 @@ h1 {
 }
 .section-filtro nav .navproductos .navproductos__item:hover .item__dropdown {
   /* display: block; */
+}
+
+.elemento-seleccionado {
+  border-bottom: 2px solid #135D87;
 }
 
 /*COMPONENTS:*/
