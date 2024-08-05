@@ -87,10 +87,13 @@
         }
         .infoProducto-precio{
             @extend .infoProducto-descripcion;
-           margin-top: .3rem;
-           margin-bottom: .3rem;
+            margin-top: .3rem;
+            margin-bottom: .3rem;
             @include fuente-texto(1.2rem,600);
             color: $color-celeste;
+        }
+        .infoProducto-id{
+            display: none;
         }
         button{
             text-align:center;

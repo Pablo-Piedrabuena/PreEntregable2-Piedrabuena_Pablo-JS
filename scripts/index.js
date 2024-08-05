@@ -6,7 +6,7 @@ const productos = [
         descripción: "Precio por kg",
         categoria:"Queso",
         precio: 5165.94,
-        stock: 100,
+        stock: 70,
         img:"../imagenes/productos/cremoso.png"
     },
     {
@@ -15,7 +15,7 @@ const productos = [
         descripción: "Precio por kg",
         categoria:"Queso",
         precio: 5062,
-        stock: 100,
+        stock: 55,
         img:"../imagenes/productos/cremoso-pizzero-hilado.png"
     },
     {
@@ -24,7 +24,7 @@ const productos = [
         descripción: "Precio por kg",
         categoria:"Queso",
         precio: 6020,
-        stock: 100,
+        stock: 80,
         img:"../imagenes/productos/magro.png"
     },
     {
@@ -33,7 +33,7 @@ const productos = [
         descripción: "Precio por kg",
         categoria:"Queso",
         precio: 5733,
-        stock: 100,
+        stock: 90,
         img:"../imagenes/productos/por-salut.png"
     },
     {
@@ -190,14 +190,12 @@ const productos = [
         img:"../imagenes/productos/leche-entera.png"
     }
 ]
+const carrito=[]
+let productoSeleccionado=""
 
+//VARIABLES/CONSTANTES
 let varFiltro="Crema"
 let productosPorCategoria
-
-//EJECUTO FUNCION/ES LUEGO DE QUE SE CARGUE EL DOM
-document.addEventListener('DOMContentLoaded', () => {
-    filtraProductos("Todos")
-});
 
 const nodoPadre = document.getElementById("galeriaProductos");
 const btnMuestraTodosLosProductos = document.getElementById("filtroTodosLosProductos");
@@ -205,9 +203,37 @@ const btnMuestraProdcutoQueso = document.getElementById("filtroQuesos");
 const btnMuestraProdcutoCrema = document.getElementById("filtroCremaLeche");
 const btnMuestraProdcutoManteca = document.getElementById("filtroManteca");
 const btnMuestraProdcutoLeche = document.getElementById("filtroLeche");
+const ventanaAgregarProdcutoAlcarrito = document.getElementById("modal-agregarProducto-Carrito");
+const ventanaMensajeAlerta = document.getElementById("mensaje-Alerta");
+const btnConetenedorformBotonSalir = document.getElementById("Conetenedorform__boton-salir");
+const btnMensajeAlertaBoton = document.getElementById("mensaje-Alerta__boton");
+const htmlMensajeAlertaMensaje = document.getElementById("mensaje-Alerta__mensaje");
+const btnConetenedorFormAgregarCarrito = document.getElementById("Conetenedorform__agregar-carrito");
 const itemFiltroPorProducto = document.querySelectorAll(".section-filtro nav ul li a")
+const cantidadProductoAComprar = document.getElementById("cantidad");
+//Etiquetas de la ventana Para Agregar prodcuto a Carrito
+const htmlAgregarProductoCarritoItemIMG = document.getElementById("agregarProducto-Carrito__itemIMG");
+const htmlAgregarProductoCarritoItemNombreProducto = document.getElementById("agregarProducto-Carrito__item-nombre-producto");
+const htmlAgregarProductoCarritoItemPrecioProducto = document.getElementById("agregarProducto-Carrito__item-precio-producto");
+const htmlAgregarProductoCarritoItemDescripcionProducto = document.getElementById("agregarProducto-Carrito__item-descripcion-producto");
+const htmlAgregarProductoCarritoItemStockProducto = document.getElementById("agregarProducto-Carrito__item-stock-producto");
+
+/* const btnAgregaAlCarrito = document.getElementsByClassName("agregarAlCarrito") */
+
+//EJECUTO FUNCION/ES LUEGO DE QUE SE CARGUE EL DOM
+document.addEventListener('DOMContentLoaded', () => {
+    filtraProductos("Todos")
+});
 
 
+
+
+//FUNCIONES
+function mensajeAlerta(mensaje){
+    htmlMensajeAlertaMensaje.innerText=mensaje
+    ventanaMensajeAlerta.classList.remove('ocultar');
+    ventanaMensajeAlerta.classList.add('flex');
+}
 function filtraProductos(categoria){
     nodoPadre.innerHTML=""
     varFiltro=categoria
@@ -225,10 +251,12 @@ function filtraProductos(categoria){
                 <div class="item-infoProducto">
                     <p class="infoProducto-descripcion">${el.descripción}</p>
                     <p class="infoProducto-precio">$ ${el.precio.toFixed(2)}</p>
-                    <button type="boton">Comprar</button>
+                    <p class="infoProducto-id">${el.id}</p>
+                    <button type="boton" class="agregarAlCarrito">Comprar</button>
                 </div>
             </article>` 
         })
+        agregaEventosALosBotonesComprar()
     }else{
         productosPorCategoria.forEach((el)=> {
             nodoPadre.innerHTML +=`<article class="productos__item">
@@ -239,20 +267,70 @@ function filtraProductos(categoria){
                 <div class="item-infoProducto">
                     <p class="infoProducto-descripcion">${el.descripción}</p>
                     <p class="infoProducto-precio">$ ${el.precio.toFixed(2)}</p>
-                    <button type="boton">Comprar</button>
+                    <p class="infoProducto-id">${el.id}</p>
+                    <button type="boton" class="agregarAlCarrito">Comprar</button>
                 </div>
             </article>` 
         })
+        agregaEventosALosBotonesComprar()
     }
     
 }
 
+function bproductoSeleccionado(){
+    let elementoSeleccioanado = productos.find((el)=>{
+        return el.id===parseInt(productoSeleccionado)
+    })
+    htmlAgregarProductoCarritoItemIMG.src=elementoSeleccioanado.img;
+    htmlAgregarProductoCarritoItemNombreProducto.innerHTML=elementoSeleccioanado.nombre;
+    htmlAgregarProductoCarritoItemPrecioProducto.innerHTML="$ "+elementoSeleccioanado.precio.toFixed(2);
+    htmlAgregarProductoCarritoItemDescripcionProducto.innerHTML=elementoSeleccioanado.descripción;
+    htmlAgregarProductoCarritoItemStockProducto.innerHTML=elementoSeleccioanado.stock;
+}
+
+function agregaEventosALosBotonesComprar(){
+    const arrayBotones =Array.from(document.getElementsByClassName("agregarAlCarrito"))
+    arrayBotones.forEach(e =>{
+        e.addEventListener('click', (e) => {
+            productoSeleccionado=(e.target.parentElement.children[2].innerText)
+            ventanaAgregarProdcutoAlcarrito.classList.add('flex');
+            ventanaAgregarProdcutoAlcarrito.classList.remove('ocultar');
+            //Agrega los Datos al HTML de la ventana de Compra
+            bproductoSeleccionado(productoSeleccionado)
+            })
+            
+    })
+}
+
+function validaCantidadIngresada(valor){
+    if((valor==="") || (valor===0) || isNaN(valor)){
+        mensajeAlerta("Debe ingresar un valor")
+        /* alert("Debe ingresar un valor") */
+    }else{
+        /* alert("Ok")  */
+    }
+}
+
+function validaStockDisponible(valor){
+    let elementoSeleccioanado = productos.find((el)=>{
+        return el.id===parseInt(productoSeleccionado)
+    })
+    if(elementoSeleccioanado.stock < valor){
+        mensajeAlerta("No tenemos suficiente.\n Actualmente en stock " + elementoSeleccioanado.stock)
+        /* alert("No tenemos stock suficiente.\n"+ "Actualmente en stock " + elementoSeleccioanado.stock) */
+    }/* else{
+        alert(elementoSeleccioanado.stock)
+    alert(valor)
+    } */
+}
+
+
+//EVENTOS
 btnMuestraTodosLosProductos.addEventListener("click", (e)=>{
     filtraProductos("Todos")
     //Quita la Clase elemento-seleccionado de todos los a
     itemFiltroPorProducto.forEach(li => {
         li.classList.remove('elemento-seleccionado');
-        /* console.log(li) */
     });
 
     //Agregamos la Clase elemento-seleccionado al elemento clickeado
@@ -264,7 +342,6 @@ btnMuestraProdcutoQueso.addEventListener("click", (e)=>{
     //Quita la Clase elemento-seleccionado de todos los a
     itemFiltroPorProducto.forEach(li => {
         li.classList.remove('elemento-seleccionado');
-        /* console.log(li) */
     });
 
     //Agregamos la Clase elemento-seleccionado al elemento clickeado
@@ -275,7 +352,6 @@ btnMuestraProdcutoCrema.addEventListener("click", (e)=>{
     //Quita la Clase elemento-seleccionado de todos los a
     itemFiltroPorProducto.forEach(li => {
         li.classList.remove('elemento-seleccionado');
-        /* console.log(li) */
     });
 
     //Agregamos la Clase elemento-seleccionado al elemento clickeado
@@ -286,7 +362,6 @@ btnMuestraProdcutoManteca.addEventListener("click", (e)=>{
     //Quita la Clase elemento-seleccionado de todos los a
     itemFiltroPorProducto.forEach(li => {
         li.classList.remove('elemento-seleccionado');
-        /* console.log(li) */
     });
 
     //Agregamos la Clase elemento-seleccionado al elemento clickeado
@@ -298,9 +373,28 @@ btnMuestraProdcutoLeche.addEventListener("click", (e)=>{
     //Quita la Clase elemento-seleccionado de todos los a
     itemFiltroPorProducto.forEach(li => {
         li.classList.remove('elemento-seleccionado');
-        /* console.log(li) */
     });
 
     //Agregamos la Clase elemento-seleccionado al elemento clickeado
     e.target.classList.add('elemento-seleccionado');  
 })
+btnConetenedorformBotonSalir.addEventListener("click", (e)=>{
+    ventanaAgregarProdcutoAlcarrito.classList.add('ocultar');
+    ventanaAgregarProdcutoAlcarrito.classList.remove('flex');
+    productoSeleccionado=""
+})
+btnMensajeAlertaBoton.addEventListener("click", (e)=>{
+    ventanaMensajeAlerta.classList.add('ocultar');
+    ventanaMensajeAlerta.classList.remove('flex');
+})
+
+btnConetenedorFormAgregarCarrito.addEventListener("click", (e)=>{
+    /* ventanaAgregarProdcutoAlcarrito.classList.add('ocultar');
+    ventanaAgregarProdcutoAlcarrito.classList.remove('flex'); */
+   /*  productoSeleccionado="" */
+   /* alert(cantidadProductoAComprar.value) */
+   validaCantidadIngresada(cantidadProductoAComprar.value)
+   validaStockDisponible(cantidadProductoAComprar.value,productoSeleccionado)
+})
+
+

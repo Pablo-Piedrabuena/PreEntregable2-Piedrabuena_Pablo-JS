@@ -16,6 +16,14 @@ strong, em {
   font-weight: normal;
 }
 
+.ocultar {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
 /*-Mixins: Fuentes*/
 /*-Mixins: sobra*/
 /*-Mixins: estilo imagen*/
@@ -144,7 +152,7 @@ h1 {
 .descripcion-principal {
   align-items: center;
 }
-.descripcion-principal h2, .descripcion-principal p {
+.descripcion-principal h2, .descripcion-principal p, .descripcion-principal .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar label, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .descripcion-principal label, .descripcion-principal .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario input, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .descripcion-principal input, .descripcion-principal .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .descripcion-principal input, .descripcion-principal .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario textarea, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .descripcion-principal textarea, .descripcion-principal .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar textarea, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .descripcion-principal textarea {
   font-family: "Barlow", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
@@ -153,7 +161,7 @@ h1 {
   width: 80%;
   margin: 1rem auto;
 }
-.descripcion-principal p {
+.descripcion-principal p, .descripcion-principal .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar label, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .descripcion-principal label, .descripcion-principal .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario input, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .descripcion-principal input, .descripcion-principal .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .descripcion-principal input, .descripcion-principal .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario textarea, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .descripcion-principal textarea, .descripcion-principal .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar textarea, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .descripcion-principal textarea {
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -234,7 +242,7 @@ h1 {
   font-weight: bold;
   color: #E6E6E6;
 }
-.contenedor-footer .contenedor-footer__columna p {
+.contenedor-footer .contenedor-footer__columna p, .contenedor-footer .contenedor-footer__columna .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar label, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contenedor-footer .contenedor-footer__columna label, .contenedor-footer .contenedor-footer__columna .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario input, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .contenedor-footer .contenedor-footer__columna input, .contenedor-footer .contenedor-footer__columna .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contenedor-footer .contenedor-footer__columna input, .contenedor-footer .contenedor-footer__columna .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario textarea, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .contenedor-footer .contenedor-footer__columna textarea, .contenedor-footer .contenedor-footer__columna .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar textarea, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contenedor-footer .contenedor-footer__columna textarea {
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -383,7 +391,7 @@ h1 {
   box-shadow: 0px -2px 36px -16px #135D87;
   align-items: center;
 }
-.tarjeta--filosofia-calidad h2, .tarjeta--filosofia-calidad p {
+.tarjeta--filosofia-calidad h2, .tarjeta--filosofia-calidad p, .tarjeta--filosofia-calidad .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar label, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .tarjeta--filosofia-calidad label, .tarjeta--filosofia-calidad .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario input, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .tarjeta--filosofia-calidad input, .tarjeta--filosofia-calidad .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .tarjeta--filosofia-calidad input, .tarjeta--filosofia-calidad .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario textarea, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .tarjeta--filosofia-calidad textarea, .tarjeta--filosofia-calidad .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar textarea, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .tarjeta--filosofia-calidad textarea {
   font-family: "Barlow", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
@@ -392,7 +400,7 @@ h1 {
   width: 100%;
   margin: 0.5rem;
 }
-.tarjeta--filosofia-calidad p {
+.tarjeta--filosofia-calidad p, .tarjeta--filosofia-calidad .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar label, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .tarjeta--filosofia-calidad label, .tarjeta--filosofia-calidad .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario input, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .tarjeta--filosofia-calidad input, .tarjeta--filosofia-calidad .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .tarjeta--filosofia-calidad input, .tarjeta--filosofia-calidad .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario textarea, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .tarjeta--filosofia-calidad textarea, .tarjeta--filosofia-calidad .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar textarea, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .tarjeta--filosofia-calidad textarea {
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -517,6 +525,9 @@ h1 {
   font-weight: 600;
   color: #135D87;
 }
+.productos__item .item-infoProducto .infoProducto-id {
+  display: none;
+}
 .productos__item .item-infoProducto button {
   text-align: center;
   align-content: center;
@@ -598,6 +609,188 @@ h1 {
 .contacto__mapa iframe {
   margin: 0.5rem auto;
   width: 90%;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+.modal-agregarProducto-Carrito {
+  /* display: flex; */
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  justify-content: center;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__ConetenedorImagen {
+  background-color: #E6E6E6;
+  width: 45%;
+  margin: 2rem 0;
+  padding: 0;
+  background-color: #FFFFFF;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__ConetenedorImagen img {
+  margin: auto;
+  width: 90%;
+  display: block;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* background-color: $colorgris-claro; */
+  background-color: #FFFFFF;
+  width: 25%;
+  margin: 2rem 0;
+  border-left: 1px solid #85929E;
+  padding-left: 1rem;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform h3 {
+  /* display: block; */
+  width: 100%;
+  margin-top: 5rem;
+  display: block;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #135D87;
+  user-select: none;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .precio {
+  margin-top: 0;
+  display: block;
+  width: 50%;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #135D87;
+  user-select: none;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform p, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar label, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario input, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario textarea, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar textarea {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #34495E;
+  user-select: none;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-disponible {
+  display: flex;
+  margin-right: 1rem;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar {
+  display: flex;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar label, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario input, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario textarea, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar textarea {
+  margin-right: 1rem;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #34495E;
+  border: 1px solid #135D87;
+  width: 5rem;
+  color: #34495E;
+  text-align: center;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input:focus {
+  outline: 1px solid #135D87;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform #Conetenedorform__agregar-carrito {
+  position: absolute;
+  bottom: 5rem;
+  left: 0;
+  right: 0;
+  border-radius: 8px;
+  width: 15rem;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  background-color: #135D87;
+  color: #E6E6E6;
+}
+.modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform #Conetenedorform__boton-salir {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  left: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #135D87;
+  color: #E6E6E6;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+#mensaje-Alerta {
+  /* display: none; */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  justify-content: center;
+}
+#mensaje-Alerta #mensaje-Alerta__contenedor {
+  position: relative;
+  background-color: #E6E6E6;
+  width: 25%;
+  height: 25%;
+  margin: 10% auto;
+  padding: 0;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+}
+#mensaje-Alerta #mensaje-Alerta__contenedor #mensaje-Alerta__titulo {
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  padding: 0.3rem;
+  /* margin-top: 1rem; */
+  display: block;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  background-color: #135D87;
+  color: #E6E6E6;
+  user-select: none;
+  border-bottom: 1px solid #135D87;
+  border-radius: 5px 5px 0 0;
+}
+#mensaje-Alerta #mensaje-Alerta__contenedor #mensaje-Alerta__mensaje {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #34495E;
+  user-select: none;
+  text-align: left;
+  width: 90%;
+  margin: 0.5rem auto;
+}
+#mensaje-Alerta #mensaje-Alerta__contenedor #mensaje-Alerta__boton {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 8px;
+  width: 5rem;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  background-color: #135D87;
+  color: #E6E6E6;
 }
 
 /*UTILITIES:*/
