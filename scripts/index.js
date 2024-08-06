@@ -232,7 +232,8 @@ const filename = currentUrl.split('/').pop();
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    if(filename === "productos.html" || filename === "productos.html?"){
+    /* filtraProductos("Todos") */
+    if(filename === "productos.html" || filename === "productos.html?" || filename === "productos.html#" || filename === "productos.html#?"){
         filtraProductos("Todos")
 
         btnMuestraTodosLosProductos.addEventListener("click", (e)=>{
@@ -318,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem("carrito", JSON.stringify(carrito))  
         })
 
-    }else if(filename === "carrito.html" || filename === "carrito.html?"){
+    }else if(filename === "carrito.html" || filename === "carrito.html?" || filename === "carrito.html#" || filename === "carrito.html#?"){
         muestraCarrito()   
         creaResumenDeCompra()
     }else{
