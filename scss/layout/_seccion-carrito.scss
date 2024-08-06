@@ -1,0 +1,31 @@
+@import "../utilities/variables";
+#seccion-carrito{
+    display: flex;
+    box-sizing: border-box;
+    /* background-color: $color-fondo-form; */
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1rem;
+    #contendor-carrito{
+        background-color: $color-fondo-form;
+        border-radius: 5px;
+        margin: .5rem;
+        width: 75%;
+        h2{
+            @include fuente-texto(1.5rem,600);
+            color:$color-celeste;
+            margin-left: .5rem;
+        }
+    }
+    #contendor-resumen-compra{
+        background-color: $color-fondo-form;
+        border-radius: 5px;
+        margin: .5rem;
+        width: 25%;
+        h2{
+            @include fuente-texto(1.5rem,600);
+            color:$color-celeste;
+            text-align: center;
+        }
+    }
+}

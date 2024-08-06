@@ -190,7 +190,7 @@ const productos = [
         img:"../imagenes/productos/leche-entera.png"
     }
 ]
-const carrito=[]
+const carrito= JSON.parse(localStorage.getItem("carrito")) || []
 let productoSeleccionado=""
 
 //VARIABLES/CONSTANTES
@@ -205,6 +205,7 @@ const btnMuestraProdcutoManteca = document.getElementById("filtroManteca");
 const btnMuestraProdcutoLeche = document.getElementById("filtroLeche");
 const ventanaAgregarProdcutoAlcarrito = document.getElementById("modal-agregarProducto-Carrito");
 const ventanaMensajeAlerta = document.getElementById("mensaje-Alerta");
+const carritoDOM = document.getElementById("contendor-carrito");
 const btnConetenedorformBotonSalir = document.getElementById("Conetenedorform__boton-salir");
 const btnMensajeAlertaBoton = document.getElementById("mensaje-Alerta__boton");
 const htmlMensajeAlertaMensaje = document.getElementById("mensaje-Alerta__mensaje");
@@ -221,14 +222,143 @@ const htmlAgregarProductoCarritoItemStockProducto = document.getElementById("agr
 /* const btnAgregaAlCarrito = document.getElementsByClassName("agregarAlCarrito") */
 
 //EJECUTO FUNCION/ES LUEGO DE QUE SE CARGUE EL DOM
+const objetoAlmacenada = JSON.parse(localStorage.getItem('carrito'));
+
+
+
+const currentUrl = window.location.href;
+const filename = currentUrl.split('/').pop();
+/* alert(filename); */
+
+
 document.addEventListener('DOMContentLoaded', () => {
-    filtraProductos("Todos")
+    if(filename === "productos.html" || filename === "productos.html?"){
+        filtraProductos("Todos")
+
+        btnMuestraTodosLosProductos.addEventListener("click", (e)=>{
+            filtraProductos("Todos")
+            //Quita la Clase elemento-seleccionado de todos los a
+            itemFiltroPorProducto.forEach(li => {
+                li.classList.remove('elemento-seleccionado');
+            });
+        
+            //Agregamos la Clase elemento-seleccionado al elemento clickeado
+            e.target.classList.add('elemento-seleccionado');    
+        })
+        
+        btnMuestraProdcutoQueso.addEventListener("click", (e)=>{
+            filtraProductos("Queso")
+            //Quita la Clase elemento-seleccionado de todos los a
+            itemFiltroPorProducto.forEach(li => {
+                li.classList.remove('elemento-seleccionado');
+            });
+        
+            //Agregamos la Clase elemento-seleccionado al elemento clickeado
+            e.target.classList.add('elemento-seleccionado');   
+        })
+        btnMuestraProdcutoCrema.addEventListener("click", (e)=>{
+            filtraProductos("Crema")
+            //Quita la Clase elemento-seleccionado de todos los a
+            itemFiltroPorProducto.forEach(li => {
+                li.classList.remove('elemento-seleccionado');
+            });
+        
+            //Agregamos la Clase elemento-seleccionado al elemento clickeado
+            e.target.classList.add('elemento-seleccionado');  
+        })
+        btnMuestraProdcutoManteca.addEventListener("click", (e)=>{
+            filtraProductos("Manteca")
+            //Quita la Clase elemento-seleccionado de todos los a
+            itemFiltroPorProducto.forEach(li => {
+                li.classList.remove('elemento-seleccionado');
+            });
+        
+            //Agregamos la Clase elemento-seleccionado al elemento clickeado
+            e.target.classList.add('elemento-seleccionado');  
+        })
+        
+        btnMuestraProdcutoLeche.addEventListener("click", (e)=>{
+            filtraProductos("Leche")
+            //Quita la Clase elemento-seleccionado de todos los a
+            itemFiltroPorProducto.forEach(li => {
+                li.classList.remove('elemento-seleccionado');
+            });
+        
+            //Agregamos la Clase elemento-seleccionado al elemento clickeado
+            e.target.classList.add('elemento-seleccionado');  
+        })
+        btnConetenedorformBotonSalir.addEventListener("click", (e)=>{
+            ventanaAgregarProdcutoAlcarrito.classList.add('ocultar');
+            ventanaAgregarProdcutoAlcarrito.classList.remove('flex');
+            productoSeleccionado=""
+        })
+        btnMensajeAlertaBoton.addEventListener("click", (e)=>{
+            ventanaMensajeAlerta.classList.add('ocultar');
+            ventanaMensajeAlerta.classList.remove('flex');
+        })
+        btnConetenedorFormAgregarCarrito.addEventListener("click", (e)=>{
+            validaCantidadIngresada(cantidadProductoAComprar.value)
+            validaStockDisponible(cantidadProductoAComprar.value,productoSeleccionado)
+        
+            alert(productoSeleccionado)
+            
+            let elementoSeleccioanado = productos.find((el)=>{
+                return el.id===parseInt(productoSeleccionado)
+            })
+            alert(elementoSeleccioanado.nombre)
+            carrito.push({
+                id: parseInt(elementoSeleccioanado.id),
+                nombre: elementoSeleccioanado.nombre,
+                descripción:elementoSeleccioanado.descripción,
+                categoria:elementoSeleccioanado.categoria,
+                precio: parseInt(elementoSeleccioanado.precio),
+                img:elementoSeleccioanado.img,
+                cantidad: parseInt(cantidadProductoAComprar.value)
+            });
+            localStorage.setItem("carrito", JSON.stringify(carrito))  
+        })
+
+    }else if(filename === "carrito.html" || filename === "carrito.html?"){
+        muestraCarrito()   
+        creaResumenDeCompra()
+    }else{
+
+    }
 });
 
 
 
 
 //FUNCIONES
+function muestraCarrito(){
+    /* console.log(objetoAlmacenada) */
+    objetoAlmacenada.forEach((el)=>{
+        /* alert(el.nombre) */
+        carritoDOM.innerHTML +=`
+        <div id="carrito-articulo">
+            <div id="articulo__contenedor-imagen">
+                <img id="contenedor-imagen__imagen" src="${el.img}" alt="">
+            </div>
+            <div id="articulo__contenedor-descripcion">
+                <h3 id="contenedor-descripcion__nombre-producto">${el.nombre}</h3>
+                <p id="contenedor-descripcion__descripcion-producto">${el.descripción}</p>
+            </div>
+            <p id="articulo__boton-cantidad">Cantidad: ${el.cantidad}</p>
+            <button id="articulo__boton-eliminar"><img src="../imagenes/iconos/eliminar.svg" alt=""></a></button>
+            <p id="articulo__precio">$ ${(parseInt(el.precio)*(parseInt(el.cantidad))).toFixed(2)}</p>
+        </div>`
+    })
+}
+function creaResumenDeCompra(){
+    let totalProductosEnCarrito=0
+    let importeTotalCompra=0
+    /* alert(objetoAlmacenada[0].nombre) */
+    objetoAlmacenada.forEach((el)=>{
+        totalProductosEnCarrito+=el.cantidad
+        importeTotalCompra+= parseInt(el.cantidad)*parseInt(el.precio)
+        })
+    /* alert(totalProductosEnCarrito + " - " + importeTotalCompra) */
+}
 function mensajeAlerta(mensaje){
     htmlMensajeAlertaMensaje.innerText=mensaje
     ventanaMensajeAlerta.classList.remove('ocultar');
@@ -306,8 +436,6 @@ function validaCantidadIngresada(valor){
     if((valor==="") || (valor===0) || isNaN(valor)){
         mensajeAlerta("Debe ingresar un valor")
         /* alert("Debe ingresar un valor") */
-    }else{
-        /* alert("Ok")  */
     }
 }
 
@@ -326,75 +454,7 @@ function validaStockDisponible(valor){
 
 
 //EVENTOS
-btnMuestraTodosLosProductos.addEventListener("click", (e)=>{
-    filtraProductos("Todos")
-    //Quita la Clase elemento-seleccionado de todos los a
-    itemFiltroPorProducto.forEach(li => {
-        li.classList.remove('elemento-seleccionado');
-    });
 
-    //Agregamos la Clase elemento-seleccionado al elemento clickeado
-    e.target.classList.add('elemento-seleccionado');    
-})
 
-btnMuestraProdcutoQueso.addEventListener("click", (e)=>{
-    filtraProductos("Queso")
-    //Quita la Clase elemento-seleccionado de todos los a
-    itemFiltroPorProducto.forEach(li => {
-        li.classList.remove('elemento-seleccionado');
-    });
-
-    //Agregamos la Clase elemento-seleccionado al elemento clickeado
-    e.target.classList.add('elemento-seleccionado');   
-})
-btnMuestraProdcutoCrema.addEventListener("click", (e)=>{
-    filtraProductos("Crema")
-    //Quita la Clase elemento-seleccionado de todos los a
-    itemFiltroPorProducto.forEach(li => {
-        li.classList.remove('elemento-seleccionado');
-    });
-
-    //Agregamos la Clase elemento-seleccionado al elemento clickeado
-    e.target.classList.add('elemento-seleccionado');  
-})
-btnMuestraProdcutoManteca.addEventListener("click", (e)=>{
-    filtraProductos("Manteca")
-    //Quita la Clase elemento-seleccionado de todos los a
-    itemFiltroPorProducto.forEach(li => {
-        li.classList.remove('elemento-seleccionado');
-    });
-
-    //Agregamos la Clase elemento-seleccionado al elemento clickeado
-    e.target.classList.add('elemento-seleccionado');  
-})
-
-btnMuestraProdcutoLeche.addEventListener("click", (e)=>{
-    filtraProductos("Leche")
-    //Quita la Clase elemento-seleccionado de todos los a
-    itemFiltroPorProducto.forEach(li => {
-        li.classList.remove('elemento-seleccionado');
-    });
-
-    //Agregamos la Clase elemento-seleccionado al elemento clickeado
-    e.target.classList.add('elemento-seleccionado');  
-})
-btnConetenedorformBotonSalir.addEventListener("click", (e)=>{
-    ventanaAgregarProdcutoAlcarrito.classList.add('ocultar');
-    ventanaAgregarProdcutoAlcarrito.classList.remove('flex');
-    productoSeleccionado=""
-})
-btnMensajeAlertaBoton.addEventListener("click", (e)=>{
-    ventanaMensajeAlerta.classList.add('ocultar');
-    ventanaMensajeAlerta.classList.remove('flex');
-})
-
-btnConetenedorFormAgregarCarrito.addEventListener("click", (e)=>{
-    /* ventanaAgregarProdcutoAlcarrito.classList.add('ocultar');
-    ventanaAgregarProdcutoAlcarrito.classList.remove('flex'); */
-   /*  productoSeleccionado="" */
-   /* alert(cantidadProductoAComprar.value) */
-   validaCantidadIngresada(cantidadProductoAComprar.value)
-   validaStockDisponible(cantidadProductoAComprar.value,productoSeleccionado)
-})
 
 

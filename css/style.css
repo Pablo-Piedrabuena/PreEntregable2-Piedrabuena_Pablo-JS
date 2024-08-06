@@ -41,6 +41,7 @@ strong, em {
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 /*-LAYOUT_Header: Logo y Menu de Navegacion*/
 header {
   display: flex;
@@ -133,6 +134,7 @@ header nav .nav__list .list__item:hover .item__dropdown, header nav .nav__list .
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 /*-LAYOUT_Titulo Principal: Para Todos los H1*/
 h1 {
   font-family: "Barlow", sans-serif;
@@ -148,6 +150,7 @@ h1 {
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 /*-LAYOUT_Descripcion Principal: Para Todos los p con esta clase*/
 .descripcion-principal {
   align-items: center;
@@ -175,6 +178,7 @@ h1 {
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 /*-LAYOUT_Contenedor Tarjeta: Para todos los contenedores de tarjetas*/
 .contenedor__tarjeta {
   display: grid;
@@ -194,6 +198,7 @@ h1 {
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 /*-LAYOUT_Contenedor Galeria productos: Para todos los contenedores*/
 .galeria__productos {
   display: flex;
@@ -210,6 +215,7 @@ h1 {
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 /*-LAYOUT_Contenedor Contactos: Contenedor form Contactos*/
 .contenedor__contacto {
   display: flex;
@@ -225,6 +231,7 @@ h1 {
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 /*-LAYOUT_Contenedor Footer:*/
 .contenedor-footer {
   display: flex;
@@ -274,6 +281,7 @@ h1 {
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 .section-filtro {
   align-items: center;
   width: 80%;
@@ -312,11 +320,52 @@ h1 {
   border-bottom: 2px solid #135D87;
 }
 
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+#seccion-carrito {
+  display: flex;
+  box-sizing: border-box;
+  /* background-color: $color-fondo-form; */
+  width: 80%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+#seccion-carrito #contendor-carrito {
+  background-color: #EDEDED;
+  border-radius: 5px;
+  margin: 0.5rem;
+  width: 75%;
+}
+#seccion-carrito #contendor-carrito h2, #seccion-carrito #contendor-carrito .tarjeta--filosofia-calidad p, #seccion-carrito #contendor-carrito .tarjeta--filosofia-calidad .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar label, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar #seccion-carrito #contendor-carrito .tarjeta--filosofia-calidad label, #seccion-carrito #contendor-carrito .tarjeta--filosofia-calidad .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario input, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario #seccion-carrito #contendor-carrito .tarjeta--filosofia-calidad input, #seccion-carrito #contendor-carrito .tarjeta--filosofia-calidad .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar #seccion-carrito #contendor-carrito .tarjeta--filosofia-calidad input, #seccion-carrito #contendor-carrito .tarjeta--filosofia-calidad .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario textarea, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario #seccion-carrito #contendor-carrito .tarjeta--filosofia-calidad textarea, #seccion-carrito #contendor-carrito .tarjeta--filosofia-calidad .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar textarea, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar #seccion-carrito #contendor-carrito .tarjeta--filosofia-calidad textarea, .tarjeta--filosofia-calidad #seccion-carrito #contendor-carrito p, .tarjeta--filosofia-calidad #seccion-carrito #contendor-carrito .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar label, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .tarjeta--filosofia-calidad #seccion-carrito #contendor-carrito label, .tarjeta--filosofia-calidad #seccion-carrito #contendor-carrito .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario input, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .tarjeta--filosofia-calidad #seccion-carrito #contendor-carrito input, .tarjeta--filosofia-calidad #seccion-carrito #contendor-carrito .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .tarjeta--filosofia-calidad #seccion-carrito #contendor-carrito input, .tarjeta--filosofia-calidad #seccion-carrito #contendor-carrito .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario textarea, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .tarjeta--filosofia-calidad #seccion-carrito #contendor-carrito textarea, .tarjeta--filosofia-calidad #seccion-carrito #contendor-carrito .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar textarea, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .tarjeta--filosofia-calidad #seccion-carrito #contendor-carrito textarea, #seccion-carrito #contendor-carrito .descripcion-principal p, #seccion-carrito #contendor-carrito .descripcion-principal .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar label, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar #seccion-carrito #contendor-carrito .descripcion-principal label, #seccion-carrito #contendor-carrito .descripcion-principal .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario input, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario #seccion-carrito #contendor-carrito .descripcion-principal input, #seccion-carrito #contendor-carrito .descripcion-principal .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar #seccion-carrito #contendor-carrito .descripcion-principal input, #seccion-carrito #contendor-carrito .descripcion-principal .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario textarea, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario #seccion-carrito #contendor-carrito .descripcion-principal textarea, #seccion-carrito #contendor-carrito .descripcion-principal .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar textarea, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar #seccion-carrito #contendor-carrito .descripcion-principal textarea, .descripcion-principal #seccion-carrito #contendor-carrito p, .descripcion-principal #seccion-carrito #contendor-carrito .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar label, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .descripcion-principal #seccion-carrito #contendor-carrito label, .descripcion-principal #seccion-carrito #contendor-carrito .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario input, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .descripcion-principal #seccion-carrito #contendor-carrito input, .descripcion-principal #seccion-carrito #contendor-carrito .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .descripcion-principal #seccion-carrito #contendor-carrito input, .descripcion-principal #seccion-carrito #contendor-carrito .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario textarea, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .descripcion-principal #seccion-carrito #contendor-carrito textarea, .descripcion-principal #seccion-carrito #contendor-carrito .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar textarea, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .descripcion-principal #seccion-carrito #contendor-carrito textarea {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #135D87;
+  margin-left: 0.5rem;
+}
+#seccion-carrito #contendor-resumen-compra {
+  background-color: #EDEDED;
+  border-radius: 5px;
+  margin: 0.5rem;
+  width: 25%;
+}
+#seccion-carrito #contendor-resumen-compra h2, #seccion-carrito #contendor-resumen-compra .tarjeta--filosofia-calidad p, #seccion-carrito #contendor-resumen-compra .tarjeta--filosofia-calidad .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar label, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar #seccion-carrito #contendor-resumen-compra .tarjeta--filosofia-calidad label, #seccion-carrito #contendor-resumen-compra .tarjeta--filosofia-calidad .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario input, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario #seccion-carrito #contendor-resumen-compra .tarjeta--filosofia-calidad input, #seccion-carrito #contendor-resumen-compra .tarjeta--filosofia-calidad .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar #seccion-carrito #contendor-resumen-compra .tarjeta--filosofia-calidad input, #seccion-carrito #contendor-resumen-compra .tarjeta--filosofia-calidad .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario textarea, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario #seccion-carrito #contendor-resumen-compra .tarjeta--filosofia-calidad textarea, #seccion-carrito #contendor-resumen-compra .tarjeta--filosofia-calidad .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar textarea, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar #seccion-carrito #contendor-resumen-compra .tarjeta--filosofia-calidad textarea, .tarjeta--filosofia-calidad #seccion-carrito #contendor-resumen-compra p, .tarjeta--filosofia-calidad #seccion-carrito #contendor-resumen-compra .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar label, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .tarjeta--filosofia-calidad #seccion-carrito #contendor-resumen-compra label, .tarjeta--filosofia-calidad #seccion-carrito #contendor-resumen-compra .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario input, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .tarjeta--filosofia-calidad #seccion-carrito #contendor-resumen-compra input, .tarjeta--filosofia-calidad #seccion-carrito #contendor-resumen-compra .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .tarjeta--filosofia-calidad #seccion-carrito #contendor-resumen-compra input, .tarjeta--filosofia-calidad #seccion-carrito #contendor-resumen-compra .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario textarea, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .tarjeta--filosofia-calidad #seccion-carrito #contendor-resumen-compra textarea, .tarjeta--filosofia-calidad #seccion-carrito #contendor-resumen-compra .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar textarea, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .tarjeta--filosofia-calidad #seccion-carrito #contendor-resumen-compra textarea, #seccion-carrito #contendor-resumen-compra .descripcion-principal p, #seccion-carrito #contendor-resumen-compra .descripcion-principal .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar label, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar #seccion-carrito #contendor-resumen-compra .descripcion-principal label, #seccion-carrito #contendor-resumen-compra .descripcion-principal .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario input, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario #seccion-carrito #contendor-resumen-compra .descripcion-principal input, #seccion-carrito #contendor-resumen-compra .descripcion-principal .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar #seccion-carrito #contendor-resumen-compra .descripcion-principal input, #seccion-carrito #contendor-resumen-compra .descripcion-principal .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario textarea, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario #seccion-carrito #contendor-resumen-compra .descripcion-principal textarea, #seccion-carrito #contendor-resumen-compra .descripcion-principal .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar textarea, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar #seccion-carrito #contendor-resumen-compra .descripcion-principal textarea, .descripcion-principal #seccion-carrito #contendor-resumen-compra p, .descripcion-principal #seccion-carrito #contendor-resumen-compra .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar label, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .descripcion-principal #seccion-carrito #contendor-resumen-compra label, .descripcion-principal #seccion-carrito #contendor-resumen-compra .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario input, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .descripcion-principal #seccion-carrito #contendor-resumen-compra input, .descripcion-principal #seccion-carrito #contendor-resumen-compra .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar input, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .descripcion-principal #seccion-carrito #contendor-resumen-compra input, .descripcion-principal #seccion-carrito #contendor-resumen-compra .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario textarea, .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .contacto__formulario .descripcion-principal #seccion-carrito #contendor-resumen-compra textarea, .descripcion-principal #seccion-carrito #contendor-resumen-compra .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar textarea, .contacto__formulario .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform .cantidad-comprar .descripcion-principal #seccion-carrito #contendor-resumen-compra textarea {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #135D87;
+  text-align: center;
+}
+
 /*COMPONENTS:*/
 /*Para Fondos*/
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 /*-COMPONENTS_Tarjeta Uno: Estilo Texto Izquierda, Imagen Derecha*/
 .item--texto {
   grid-column: 1/2;
@@ -348,6 +397,7 @@ h1 {
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 /*-COMPONENTS_Tarjeta Dos: Estilo Texto Derecha, Imagen Izquierda<*/
 .item--textoDos {
   grid-column: 2/3;
@@ -379,6 +429,7 @@ h1 {
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 /*-COMPONENTS_Tarjeta Tres: Titulo, Parrafo e Imagenes c/Leyenda*/
 .tarjeta--filosofia-calidad {
   display: flex;
@@ -428,6 +479,7 @@ h1 {
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 /*-COMPONENTS__Productos: Item del Contenedor Galeria productos*/
 /* .productos__item{
     width: 20rem;
@@ -545,6 +597,7 @@ h1 {
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 /*-COMPONENTS__formulario Contacto: Formulario y Mapa*/
 .contacto__formulario {
   display: flex;
@@ -615,6 +668,7 @@ h1 {
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 .modal-agregarProducto-Carrito {
   /* display: flex; */
   position: fixed;
@@ -633,7 +687,7 @@ h1 {
   width: 45%;
   margin: 2rem 0;
   padding: 0;
-  background-color: #FFFFFF;
+  background-color: #EDEDED;
 }
 .modal-agregarProducto-Carrito .agregarProducto-Carrito__ConetenedorImagen img {
   margin: auto;
@@ -645,7 +699,7 @@ h1 {
   display: flex;
   flex-direction: column;
   /* background-color: $colorgris-claro; */
-  background-color: #FFFFFF;
+  background-color: #EDEDED;
   width: 25%;
   margin: 2rem 0;
   border-left: 1px solid #85929E;
@@ -730,6 +784,7 @@ h1 {
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 #mensaje-Alerta {
   /* display: none; */
   position: fixed;
@@ -750,7 +805,7 @@ h1 {
   height: 25%;
   margin: 10% auto;
   padding: 0;
-  background-color: #FFFFFF;
+  background-color: #EDEDED;
   border-radius: 5px;
 }
 #mensaje-Alerta #mensaje-Alerta__contenedor #mensaje-Alerta__titulo {
@@ -793,15 +848,130 @@ h1 {
   color: #E6E6E6;
 }
 
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+#carrito-articulo {
+  display: flex;
+  /* width: 100%;
+  height: 100%; */
+  box-sizing: border-box;
+  align-items: center;
+  /* text-align: center; */
+  border-bottom: 1px solid #85929E;
+}
+#carrito-articulo #articulo__contenedor-imagen {
+  width: 15%;
+  /* margin: 2rem 0; */
+  /* padding: 0; */
+  /* background-color: $color-fondo-form; */
+}
+#carrito-articulo #articulo__contenedor-imagen #contenedor-imagen__imagen {
+  margin: auto;
+  width: 100%;
+  /* display: block; */
+}
+#carrito-articulo #articulo__contenedor-descripcion {
+  margin: auto;
+  text-align: left;
+  width: 70%;
+  box-sizing: border-box;
+}
+#carrito-articulo #articulo__contenedor-descripcion #contenedor-descripcion__nombre-producto {
+  text-align: left;
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #135D87;
+}
+#carrito-articulo #articulo__contenedor-descripcion #contenedor-descripcion__descripcion-producto {
+  text-align: left;
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #34495E;
+}
+#carrito-articulo #articulo__boton-cantidad {
+  box-sizing: border-box;
+  width: 25%;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #34495E;
+}
+#carrito-articulo #articulo__boton-eliminar {
+  box-sizing: border-box;
+  margin: 2rem;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  width: 3%;
+  height: 3%;
+  /* justify-content: center; */
+}
+#carrito-articulo #articulo__boton-eliminar img {
+  width: 100%;
+}
+#carrito-articulo #articulo__precio {
+  box-sizing: border-box;
+  width: 25%;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #34495E;
+}
+
+/*Para Fondos*/
+/*Para Sub-Fondos*/
+/*Para enlaces y Texto sobre Fonod Oscuro*/
+/*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
+#resumen-compra__total-prodcutos {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #34495E;
+  margin: 1rem 0.5rem;
+}
+
+#resumen-compra__importe-total {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #34495E;
+  margin: 1rem 0.5rem;
+}
+
+button {
+  display: block;
+  border-radius: 8px;
+  width: 12rem;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  background-color: #135D87;
+  color: #E6E6E6;
+  margin-top: 5rem;
+}
+
 /*UTILITIES:*/
 /*Para Fondos*/
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 /*Para Fondos*/
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 /*-UTILITIES__Media Query Small: Para la vista Mobile*/
 @media screen and (max-width: 427px) {
   header a {
@@ -912,6 +1082,7 @@ h1 {
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 /*-UTILITIES__Media Query Medium: Para la vista Tablet*/
 @media screen and (min-width: 427px) and (max-width: 767px) {
   .contenedor__tarjeta {
@@ -962,11 +1133,13 @@ h1 {
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 /*-UTILITIES__Media Query Large: Para la vista Desktop en Caso de NECESITAR*/
 /*Para Fondos*/
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/
 /*Texto de Tarjetas y Form*/
+/* $color-fondo-form: #FFFFFF; */
 /*-UTILITIES__Animaciones:*/
 /*--Animaciones: Clase C/Animacion Aplicada*/
 .elemento-balancear {

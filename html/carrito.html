@@ -68,61 +68,44 @@
     <main>
 
     </main>
-        <h1 data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">NUESTROS PRODUCTOS</h1>
-        <section class="descripcion-principal" data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
-            <h2>Variedad y Calidad</h2>
-            <p><em>Acercamos a tu mesa, una gran
-                variedad de Productos: Quesos Blandos,
-                Quesos Semi-Duros, Quesos Duros, Ricotta,
-                Crema de Leche y Manteca, de alta calidad y a un precio accesible</em>.
-            </p>
-        </section>
-        <section class="section-filtro">
-            <nav>
-                <ul class="navproductos">
-                    <li class="navproductos__item"><a href="" id="filtroTodosLosProductos">Todos</a></li>
-                    <li class="navproductos__item"><a href="" id="filtroQuesos">Quesos</a></li>
-                    <li class="navproductos__item"><a href="" id="filtroCremaLeche">Crema de Leche</a></li>
-                    <li class="navproductos__item"><a href="" id="filtroManteca">Manteca</a></li>
-                    <li class="navproductos__item"><a href="" id="filtroLeche">Leche</a></li>       
-                </ul>
-            </nav>
-        </section>
-        <section id="galeriaProductos"  class="galeria__productos" data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
-            <!-- <article class="productos__item">
-                <figure>
-                    <img src="../imagenes/productos/cremoso.webp" alt="Imagen del producto [Nombre del producto]">
-                    <figcaption>Queso Mozzarella Hilada Para Fetear</figcaption>
-                </figure>
-                <div class="item-infoProducto">
-                    <p class="infoProducto-descripcion">Precio por Pouch de 3 Lts.</p>
-                    
-                    <p class="infoProducto-precio">$25.388,97</p>
-                    <button type="boton">Añadir al carrito</button>
-                </div>
-            </article>-->
+        <h1 data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">Carrito de compras</h1>
+        <section id="seccion-carrito" data-aos="fade" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+            <article id="contendor-carrito">
+                <h2 id="carrito__titulo">Productos en carrito</h2>
+                <!-- <div id="carrito-articulo">
+                    <div id="articulo__contenedor-imagen">
+                        <img id="contenedor-imagen__imagen" src="../imagenes/productos/crema-leche-balde.png" alt="">
+                    </div>
+                    <div id="articulo__contenedor-descripcion">
+                        <h3 id="contenedor-descripcion__nombre-producto">XXQeso Mozzarella Hilada Para Fetear</h3>
+                        <p id="contenedor-descripcion__descripcion-producto">Precio por Pouch de 3 Lts.</p>
+                    </div>
+                    <p id="articulo__boton-cantidad"></p>
+                    <button id="articulo__boton-eliminar"><img src="../imagenes/iconos/eliminar.svg" alt=""></a></button>
+                    <p id="articulo__precio">$1.290.325,44</p>
+                </div> -->
+
+
+                <!-- <div id="carrito-articulo">
+                    <div id="articulo__contenedor-imagen">
+                        <img id="contenedor-imagen__imagen" src="../imagenes/productos/crema-leche-balde.png" alt="">
+                    </div>
+                    <div id="articulo__contenedor-descripcion">
+                        <h3 id="contenedor-descripcion__nombre-producto">Queso Mozzarella Hilada Para Fetear</h3>
+                        <p id="contenedor-descripcion__descripcion-producto">Precio por Pouch de 3 Lts.</p>
+                    </div>
+                    <button id="articulo__boton-eliminar"><img src="../imagenes/iconos/eliminar.svg" alt=""></a></button>
+                    <p id="articulo__precio">$1.290.325,44</p>
+                </div> -->
+            </article>
+            <article id="contendor-resumen-compra">
+                <h2>Resumen de Compra</h2>
+                <p id="resumen-compra__total-prodcutos">Total Productos: 100.000</p>
+                <p id="resumen-compra__importe-total">Importe Total: $100.000.000,00</p>
+                <button id="resumen-compra__boton">Continuar Compra</button>
+            </article>
         </section>
 
-        <section id="modal-agregarProducto-Carrito" class="modal-agregarProducto-Carrito ocultar">
-                <div class="agregarProducto-Carrito__ConetenedorImagen ">
-                    <img src="../imagenes/productos/crema-leche-balde.png" alt="" class="agregarProducto-Carrito__item" id="agregarProducto-Carrito__itemIMG">
-                </div>
-                <form class="agregarProducto-Carrito__Conetenedorform" onsubmit="return">
-                    <button id="Conetenedorform__boton-salir">X</button>
-                    <h3 class="agregarProducto-Carrito__item" id="agregarProducto-Carrito__item-nombre-producto">Crema de leche en Balde</h3>
-                    <p class="agregarProducto-Carrito__item precio" id="agregarProducto-Carrito__item-precio-producto">$5.245.28</p>
-                    <p class="agregarProducto-Carrito__item" id="agregarProducto-Carrito__item-descripcion-producto">Precio por Balde de 5 Lts.</p>
-                    <div class="cantidad-disponible">
-                        <p class="agregarProducto-Carrito__item cantidad-disponible">Cantidad Disponible:</p>
-                        <p class="agregarProducto-Carrito__item" id="agregarProducto-Carrito__item-stock-producto">100.</p>
-                    </div>
-                    <div class="cantidad-comprar">
-                        <label for="cantidad" class="agregarProducto-Carrito__item">Cantidad:</label>
-                        <input type="number" id="cantidad" class="agregarProducto-Carrito__item" min="1" value="1">
-                    </div>
-                    <button id="Conetenedorform__agregar-carrito">Agregar al carrito</button>
-                </form>            
-        </section>
         <article id="mensaje-Alerta" class="ocultar">
             <div id="mensaje-Alerta__contenedor">
                 <h4 id="mensaje-Alerta__titulo">Revise los siguientes errores</h4>
@@ -164,6 +147,7 @@
         <script>
             AOS.init();
         </script>
+        <!-- <script src="../scripts/index.js"></script> -->
         <script src="../scripts/index.js"></script>        
 </body>
 </html>
