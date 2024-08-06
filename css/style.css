@@ -37,6 +37,19 @@ strong, em {
   border-radius: 50%;
 }
 
+.carrito-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 100;
+  animation: pulso 2s infinite linear;
+  border-radius: 50%;
+  width: 3rem;
+}
+.carrito-btn a img {
+  width: 100%;
+}
+
 /*Para Fondos*/
 /*Para Sub-Fondos*/
 /*Para enlaces y Texto sobre Fonod Oscuro*/

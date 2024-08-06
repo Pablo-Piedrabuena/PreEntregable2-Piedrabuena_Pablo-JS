@@ -233,7 +233,7 @@ const filename = currentUrl.split('/').pop();
 
 document.addEventListener('DOMContentLoaded', () => {
     /* filtraProductos("Todos") */
-    if(filename === "productos.html" || filename === "productos.html?" || filename === "productos.html#" || filename === "productos.html#?"){
+    if(filename === "productos.html" || filename === "productos.html?" || filename === "productos.html#" || filename === "productos.html?#"){
         filtraProductos("Todos")
 
         btnMuestraTodosLosProductos.addEventListener("click", (e)=>{
@@ -301,12 +301,12 @@ document.addEventListener('DOMContentLoaded', () => {
             validaCantidadIngresada(cantidadProductoAComprar.value)
             validaStockDisponible(cantidadProductoAComprar.value,productoSeleccionado)
         
-            alert(productoSeleccionado)
+            /* alert(productoSeleccionado) */
             
             let elementoSeleccioanado = productos.find((el)=>{
                 return el.id===parseInt(productoSeleccionado)
             })
-            alert(elementoSeleccioanado.nombre)
+            /* alert(elementoSeleccioanado.nombre) */
             carrito.push({
                 id: parseInt(elementoSeleccioanado.id),
                 nombre: elementoSeleccioanado.nombre,
@@ -316,10 +316,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 img:elementoSeleccioanado.img,
                 cantidad: parseInt(cantidadProductoAComprar.value)
             });
-            localStorage.setItem("carrito", JSON.stringify(carrito))  
+            localStorage.setItem("carrito", JSON.stringify(carrito))
+            ventanaAgregarProdcutoAlcarrito.classList.add('ocultar');
+            ventanaAgregarProdcutoAlcarrito.classList.remove('flex');
+            productoSeleccionado=""  
         })
 
-    }else if(filename === "carrito.html" || filename === "carrito.html?" || filename === "carrito.html#" || filename === "carrito.html#?"){
+    }else if(filename === "carrito.html" || filename === "carrito.html?" || filename === "carrito.html#" || filename === "carrito.html?#"){
         muestraCarrito()   
         creaResumenDeCompra()
     }else{
@@ -327,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
+/* localStorage.clear() */
 
 
 //FUNCIONES
