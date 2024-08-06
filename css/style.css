@@ -589,7 +589,8 @@ h1 {
   font-weight: 400;
   background-color: #135D87;
   color: #E6E6E6;
-  height: 2rem;
+  height: 2.5rem;
+  margin: 0;
   border-radius: 0px 5px 0px 5px;
 }
 
@@ -769,8 +770,9 @@ h1 {
   color: #E6E6E6;
 }
 .modal-agregarProducto-Carrito .agregarProducto-Carrito__Conetenedorform #Conetenedorform__boton-salir {
+  margin: 0;
   position: absolute;
-  top: 3px;
+  top: 13px;
   right: 3px;
   left: none;
   width: 2rem;
